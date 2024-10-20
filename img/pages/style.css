@@ -1,0 +1,1091 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.column {
+	flex: 1;
+	margin: 1rem;
+}
+
+.documente {
+	background-color: #f8f8f8;
+	padding: 1rem;
+}
+
+.imagini {
+	background-color: #f2f2f2;
+	padding: 1rem;
+}
+
+.chat {
+	background-color: #e6e6e6;
+	padding: 1rem;
+}
+
+/* pentru formularul de date utilizator */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.formular {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.camp {
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8"><path fill="%23333" d="M0 0l6 8 6-8H0z"/></svg>') no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 8px 5px;
+}
+
+
+/*headerul*/
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* Adăugați culoarea de fundal dorită */
+  padding: 5px;
+}
+
+#numeUnitate {
+  color: violet;
+  text-shadow: 1px 1px 2px #000000;
+  position: absolute; /* sau 'fixed' în funcție de necesități */
+  top: 0;
+  left: 0;
+  padding: 5px; /* Ajustează pentru a poziționa textul exact unde dorești */
+  font-size: 26px;
+}
+
+
+/* Adăugați un margin-top pentru a compensa înălțimea header-ului */
+body {
+  margin-top: 60px; /* Ajustați această valoare în funcție de înălțimea header-ului */
+}
+
+.grupa-clasa-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.nume-grupa {
+  margin-bottom: 0;
+  display: inline-block;
+  color: violet;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#select_grupa_clasa {
+  font-size: 22px;
+  font-weight: bold;
+  min-width: 180px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+  color: violet;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+
+/*condiția CANCELARIE */
+.conditie-cancelarie {
+  position: absolute;
+  top: -3px;  /* Ajustat pentru mai mult spațiu în partea de jos */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 0, 0, 0.7);  /* Redus opacitatea pentru a face textul mai puțin dominant */
+  font-size: 14px;  /* Dimensiunea fontului redusă */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+}
+
+/*este containerul in care se afiseaza cardurile la clic pe CANCELARIE (profesorii si administrativul)*/
+.cancelarie-container {
+  left: 5%;
+    transform: translateX(-5%);
+    height: auto;
+    min-height: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Umbră pentru fereastra */
+    position: absolute;
+    top: calc(100% + 7px); /* 10px distanță de titlul "Grupa Mica" */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100% /* sau orice valoare care vă convine */;
+    z-index: 5;  /* Asigura-te ca apare peste celelalte elemente */
+}
+
+
+
+
+.talk-to {
+  margin-top: 3px;
+  margin-bottom: 2px;
+  display: inline-block;
+  color: violet;
+  margin-left : 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.parinti-info {
+  font-size: 14px;
+  font-style: italic;
+  color: #888;
+  flex: 2;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+    .image_grid_container {
+        flex-wrap: wrap; /* Acest lucru va permite imaginilor să se înfășoare în coloană pe ecranele mai mici */
+    }
+
+    .image-grid-item {
+        flex-basis: 100%; /* Acest lucru va face ca elementele să aibă lățimea maximă pe ecranele mici */
+        max-width: 100%; /* Acest lucru va permite elementelor să se întindă pe toată lățimea ecranului */
+    }
+}
+
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+  }
+
+
+}
+
+@media (min-width: 992px) {
+  .formular {
+    padding: 40px;
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  height: 100px;
+  margin-top: 20px;
+}
+select#grupa_clasa_copil {
+  font-size: 14px;
+  color: #333333;
+}
+.continua-button {
+  background-color: #3088d6;
+  border: 3px solid #EE82EE;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #000;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.continua-button:hover {
+  background-color: #4d9de0;
+  border: 1px solid #EE82EE;
+}
+
+.continua-text {
+  display: block;
+  line-height: 1;
+}
+.file-title {
+  color: #888;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.doc-item {
+  margin-bottom: 20px;
+}
+
+/*aici este codul style pentru grila de 3 imagini afisate din imagini_activitati.php*/
+/* Stil pentru containerul grid-ului de imagini */
+.image_grid_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Acest lucru va împiedica imaginile să se înfășoare în coloană la redimensionare */
+    padding: 10px;
+}
+
+/* Stil pentru fiecare element de imagine în grid */
+.image-grid-item {
+    flex: 1;
+    margin: 10px; /* Acesta este spațiul dintre casetele de imagini. Ajustați în funcție de nevoi */
+    box-sizing: border-box; /* Aceasta asigură că marginile și padding-ul sunt incluse în lățimea totală a elementului, păstrând astfel dimensiunile casetei constante */
+    border: 1px solid #ccc; /* Acesta este un border simplu, gri deschis. Modificați în funcție de nevoile dvs. de design */
+    overflow: hidden; /* Acest lucru va ascunde orice parte a imaginii care depășește dimensiunile casetei */
+    flex-basis: 100%; /* Acest lucru împarte spațiul între cele trei elemente */
+    max-width: 100%; /* Acest lucru restrânge lățimea elementului la 33% din lățimea containerului */
+    box-sizing: border-box; /* Acest lucru face ca padding-ul și border-ul să fie incluse în lățimea totală */
+    padding: 10px; /* Acest lucru adaugă un spațiu în jurul imaginii */
+    box-shadow: 0 4px 6px rgba(138, 43, 226, 0.1); /* Folosiți culoarea violet */
+    transition: box-shadow 0.3s;
+}
+
+/* Stil pentru imaginile din grid */
+.galerie-activitati {
+    width: 100%;
+    height: auto; /* Acest lucru va păstra proporțiile imaginii în timp ce se mărește lățimea */
+    object-fit: cover; /* Acest lucru va asigura că întreaga imagine se va potrivi în caseta, decupând partea care depășește */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Un efect de hover pentru a indica interactivitatea cu imaginile */
+.galerie-activitati:hover {
+    transform: scale(1.5);
+}
+
+
+/*codul urmator se ocupa de afisarea in iframe a celor 3 documente pdf*/
+#iframe_grid_container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.iframe-grid-item {
+    flex: 1;
+    margin: 3px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    overflow: auto;
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 3px;
+    box-shadow: 0 4px 6px rgba(138, 43, 226, 0.1);
+    height: 100%;
+}
+
+
+/*codul pentru fereastra de afisare destinatari la trimiterea mesajelor*/
+    #fereastraSelectie {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        padding: 10px;
+        position: absolute;
+        width: 300px;
+        z-index: 1000;
+    }
+
+    .user-selection {
+        cursor: pointer;
+        padding: 4px;
+    }
+
+    .user-selection:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .input-wrapper {
+    position: relative;
+}
+
+
+/*codul pentru notificarile cu clopotel*/
+.ascuns {
+  display: none;
+}
+
+.clopotel_icon {
+  font-size: 18px;
+  color: violet; /* Schimbă culoarea clopotelului */
+  cursor: pointer;
+  margin-left: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adaugă o mică umbră */
+}
+
+#container_notificari {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: red;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0.3cm;
+  align-items: center;
+
+}
+
+#container_notificari p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+ }
+
+ #prezenta_generala {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: blue; /* Sau oricare altă culoare pe care o preferi */
+  text-shadow: 2px 0.1px 2px rgba(0, 0, 0, 0.5);
+  display: block;
+  position: fixed;
+  left: 0;
+  margin-left: 0.1cm; /* Poți ajusta această valoare pentru a poziționa corect textul */
+  align-items: center;
+}
+
+#prezenta_generala p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 7px;
+}
+
+.logo-link {
+  text-decoration: none; /* Elimină sublinierea implicită a linkurilor */
+  color: inherit; /* Păstrează culoarea textului moștenită, dacă este necesar */
+}
+
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url('tid4k.png');
+  width: 1.8cm;
+  height: 1.55cm;
+  position: absolute;
+  top: 3px;
+  right: 13px;
+}
+
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url('tid4k.png');
+  width: 1.8cm;
+  height: 1.55cm;
+  position: absolute;
+  top: 3px;
+  right: 13px;
+}
+
+.logo-qrcode-mic {
+    display: inline-block;   /* Menține elementul în fluxul inline, dar permite dimensiunile să fie setate */
+    width: 50px;             /* Lățime specifică pentru reducerea dimensiunii imaginii */
+    height: 50px;            /* Înălțimea se ajustează automat pentru a menține proporțiile */
+    position: relative;      /* 'Relative' este folosit aici pentru o poziționare relativă la elementul său normal */
+    float: right;            /* Aliniază elementul la dreapta */
+    margin-top: 0px;         /* Elimină orice margine superioară, dacă este setată anterior */
+    box-shadow: none;        /* Elimină orice umbră de la box-shadow */
+    margin-right: 10px;      /* Adaugă un pic de spațiu la dreapta, ajustează după nevoie */
+}
+
+.logo-qrcode-mare {
+    display: inline-block; /* Sau 'block' dacă este mai potrivit pentru nevoile tale */
+    position: absolute; /* Poziționare absolută pentru controlul exact al poziției */
+    top: 7px;
+    right: 9px;
+    box-shadow: none;
+    width: 200px; /* Specifică o lățime fixă pentru div, dacă dorești să controlezi dimensiunea */
+    height: 200px; /* Specifică o înălțime fixă pentru div */
+    overflow: hidden; /* Ascunde orice parte a imaginii care depășește dimensiunea div-ului */
+}
+
+.logo-qrcode-mare img {
+    width: 100%;  /* Face ca imaginea să ocupe 100% din lățimea div-ului părinte */
+    height: auto; /* Menține proporția imaginii */
+    display: block; /* Elimină orice spațiu extra sub imagine */
+}
+
+/*codul care se ocupa de afisarea ferestrei grid-copii-parinti-profesori sub titlul Grupa Mica*/
+.grid-copii {
+    left: 5%;
+    transform: translateX(-5%);
+    height: auto;
+    min-height: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Umbră pentru fereastra */
+    position: absolute;
+    top: calc(100% + 7px); /* 10px distanță de titlul "Grupa Mica" */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100% /* sau orice valoare care vă convine */;
+}
+
+.grid-profesori {
+   /* left: 5%;
+    transform: translateX(-5%);*/
+    height: auto;
+    min-height: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Umbră pentru fereastra */
+    position: absolute;
+    top: calc(100% + 7px); /* 10px distanță de titlul "Grupa Mica" */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100% /* sau orice valoare care vă convine */;
+}
+
+
+
+.card-copil {
+    width: auto; /* sau 30vw */
+    height: auto;
+    display: inline-block;
+    flex-basis: calc(100% / 4); /* Arată 4 carduri pe rând */
+    margin: 1.5px;
+    padding: 1.5px;
+    box-sizing: border-box;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Umbră pentru card */
+    background-color: white; /* Fondul alb */
+    border: 1px solid gray;
+}
+
+.imagine-copil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagine-copil img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră în jurul imaginii */
+}
+
+.info-copil {
+    text-align: center;
+    background-color: white;
+    align-content: center;
+    padding: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră în jurul textului */
+}
+
+.info-copil p {
+    margin: 0; /* Înlătură marginile implicite ale paragrafului */
+    word-wrap: break-word; /* Asigură că textul se întrerupe pentru a se potrivi cardului */
+    }
+
+.info-copil p.nume-copil {
+    font-size: 1.25rem; /* Mărește dimensiunea fontului pentru numele copilului */
+    font-weight: bold; /* Textul cu bold */
+    color: #333; /* Culoare text cu umbra */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Umbra pentru text */
+   }
+
+.info-copil p.info-parinte,
+.info-copil p.info-parinte ~ p {
+    font-size: 0.85rem; /* Dimensiunea fontului mai mică pentru informațiile părintelui */
+    color: #555; /* Culoare text gri */
+}
+
+
+
+/* Dimensiuni mai mici pentru ecrane mici */
+@media (max-width: 700px) {
+    .imagine-copil img {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .info-copil p.nume-copil {
+        font-size: 1rem;
+        white-space : nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .info-copil p.info-parinte,
+    .info-copil p.info-parinte ~ p {
+        font-size: 0.45rem;
+        text-align: center;
+    }
+
+    .card-copil {
+        flex: 0 0 calc(25% - 10px); /* 4 carduri pe linie */
+    }
+}
+
+/* Dimensiuni mai mari pentru ecrane mari */
+@media (min-width: 701px) {
+    .imagine-copil img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .info-copil p.nume-copil {
+        font-size: 1.25rem;
+        text-align: center;
+        white-space : nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .info-copil p.info-parinte,
+    .info-copil p.info-parinte ~ p {
+        font-size: 0.65rem;
+        text-align: center;
+    }
+}
+
+
+/*codul care se ocupa de stilul afisarii profesorilor la clic pe nume grupa*/
+.card-profesor {
+    width: auto; /* sau 30vw */
+    height: auto;
+    display: inline-block;
+    flex-basis: calc(100% / 4); /* Arată 4 carduri pe rând */
+    margin: 3px;
+    padding: 3px;
+    box-sizing: border-box;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Umbră pentru card */
+    background-color: white; /* Fondul alb */
+    border: 1px solid gray;
+}
+
+.imagine-profesor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagine-profesor img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră în jurul imaginii */
+}
+
+
+.info-profesor {
+    text-align: center;
+    background-color: white;
+    align-content: center;
+    padding: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră în jurul textului */
+}
+
+.info-profesor p {
+    margin: 0; /* Înlătură marginile implicite ale paragrafului */
+    word-wrap: break-word; /* Asigură că textul se întrerupe pentru a se potrivi cardului */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+    .email-profesor {
+      font-size: 0.65rem;
+      color: #555;
+    }
+
+
+/*codul pentru bulina verde*/
+.online {
+    display: inline;
+    color: limegreen;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+
+/* Stiluri pentru tabelul de prezenta */
+.tabel-prezenta {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.tabel-prezenta th, .tabel-prezenta td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.tabel-prezenta thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tabel-prezenta tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.tabel-prezenta tr:hover {
+    color: #212529;
+    background-color: #f5f5f5;
+}
+
+.data-prezenta {
+  color: gray;
+}
+
+.titlu-prezenta {
+	background-color: #f2f2f2;
+	padding: 1.5rem;
+    color: #555;
+}
+
+.tabel-prezenta th {
+    text-align: left;
+  }
+
+/*limegreen este clasa care determina numele copilului sa fie verde, in carduri copii, atunci cand parintele a scanat codul QR (a avut ultima_activitate)*/
+.limegreen {
+  color: limegreen;
+}
+
+/*zilele de prezenta , ca si culoare*/
+.gray {
+  color: #555;
+}
+
+
+.present {
+    color: green;
+}
+
+.absent {
+    color: #FFCCCC;
+}
+
+.late {
+    color: orange;
+}
+
+/*este css-ul pentru tabelul lunar care se afiseaza in sectiunea de Prezenta Copil*/
+.lunar-report-container {
+  background-color: #f0f0f0; /* Gri deschis */
+}
+
+/*este css-ul pentru tabelul zilele-prezenta-lunara care se afiseaza in sectiunea de Prezenta Copil*/
+.zile-prezenta-lunar {
+  background-color: #d0d0d0; /* Gri deschis */
+}
+
+/*css-ul care se ocupa de butonul de print "Print"*/
+.print-button {
+  background-color: #4CAF50; /* Verde */
+  border: 2px solid #388E3C; /* Contur verde închis */
+  color: white; /* Text alb */
+  padding: 2px 2px; /* Spațiere în interiorul butonului */
+  text-align: center; /* Aliniere text în centru */
+  text-decoration: none; /* Fără subliniere */
+  display: inline-block; /* Tipul de afișare */
+  font-size: 13px; /* Mărimea fontului */
+  margin: 4px 2px; /* Margini în jurul butonului */
+  cursor: pointer; /* Cursor de mână */
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1); /* Umbră gri deschis */
+  border-radius: 5px; /* Margini rotunjite pentru efect 3D */
+  transition: all 0.3s; /* Efect de tranziție */
+}
+
+.print-button:hover {
+  background-color: #45a049; /* Verde mai închis la hover */
+  box-shadow: 0px 6px 8px rgba(0,0,0,0.2); /* Umbră mai mare la hover */
+}
+
+@media print {
+  .print-button {
+    display: none; /* Ascunde butonul când pagina este tipărită */
+  }
+}
+
+/*incearca sa potriveasca continutul paginii in A4 la tiparire*/
+@media print {
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+  }
+  /* pot fi si alte stiluri care să influențeze aspectul paginii atunci când este tipărită */
+}
+
+
+/*fixarea titlului "Prezenta copii si contributia" impreuna cu butonul de "Print"*/
+.fixed-title {
+  position: fixed;
+  top: 70px; /* Acestă valoare ar trebui să fie înălțimea header-ului; ajustează-o după nevoie */
+  left: 0;
+  width: 100%;
+  z-index: 99; /* Poți să-l setezi sub z-index-ul header-ului pentru a evita suprapunerea */
+  background-color: #fff;
+}
+
+.titlu-prezenta {
+  margin: 0; /* Elimină orice marjă implicită pentru a menține div-ul cât mai compact */
+  font-size: 18px; /* Ajustează dimensiunea fontului după necesitate */
+  line-height: 1; /* Ajustează înălțimea liniei pentru a controla spațierea verticală */
+  padding: 5px 0px; /* Ajustează padding-ul pentru a controla spațierea în interiorul elementului */
+}
+
+main {
+  padding-top: 40px; /* Ajustează paddingul în funcție de cât de mult spațiu dorești */
+}
+
+
+/*afisarea valorilor contributiei datorate , contributiei platite si diferenta contributie rezultata */
+.contributia-bold {
+  font-weight: bold;
+}
+
+.diferenta-negativa {
+  color: red;
+}
+
+.diferenta-pozitiva {
+  color: green;
+}
+
+.contributia-platita-bold {
+  font-weight: bold;
+}
+
+.total-de-plata-lunar {
+    border: 2.5px solid red;
+    padding: 2px;
+    display: inline-block;
+   /* color: darkgray;*/
+}
+
+/*asezarea butoanelor "upload" si "download"*/
+.upload_button {
+    display: inline-block;
+    padding: 0px 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    margin-left: 1px; /* Adaugă marginea dreaptă aici */
+    margin-right: 20px; /* Adaugă marginea dreaptă aici */
+}
+
+.download_button {
+    display: inline-block;
+    padding: 0px 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #7b4dbf; /* Alegeți o nuanță de violet care vă place */
+    border-color: #6a42b7; /* Alegeți o nuanță de violet care vă place */
+}
+
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3px;
+  position: sticky;
+  z-index: 998;
+}
+
+/* este incasetarea formularului in care se afla butoanele de upload si download si codul acesta determina alnierea la capetele stanga dreapta */
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/*afisarea cardurilor profesori, administrativ , pentru CANCELARIE*/
+.card-cancelarie {
+    width: auto; /* sau 30vw */
+    height: auto;
+    display: inline-block;
+    flex-basis: calc(100% / 4); /* Arată 4 carduri pe rând */
+    margin: 1.5px;
+    padding: 1.5px;
+    box-sizing: border-box;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Umbră pentru card */
+    background-color: white; /* Fondul alb */
+    border: 1px solid gray;
+}
+
+.profesor-nume, .profesor-materie {
+  margin-bottom: 10px;
+}
+
+.profesor-mesaj-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 5px;
+}
+
+/*clasa pentru culoarea cardurilor administrative (director, secretara, adminisrator...)*/
+.card-administrativ {
+    background-color: #dcdcdc;
+}
+
+
+/*cadran_simulat ID4K*/
+.fontMic {
+  font-size: 14px;
+   text-align: center; /* Centrează textul */
+    padding: 2px;
+}
+
+.fontMare {
+  font-size: 24px;
+   text-align: center; /* Centrează textul */
+    padding: 2px;
+}
+
+.chenar {
+  border: 3px solid;  /* grosimea și stilul chenarului */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);  /* umbră */
+  margin-top: 3px;  /* spațiere dedesubtul titlului */
+  margin-right: 10px;  /* spațiere la dreapta chenarului */
+  overflow: hidden;
+   text-align: center; /* Centrează textul */
+    padding: 10px;
+}
+
+.chenar_mare {
+  border: 3px solid;  /* grosimea și stilul chenarului */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);  /* umbră */
+  margin-top: 3px;  /* spațiere dedesubtul titlului */
+  margin-left: 40px;
+  overflow: hidden;
+   text-align: center; /* Centrează textul */
+    padding: 10px;
+    max-height: 50%;
+}
+
+/* Resetează sau suprascrie stilurile implicite */
+select.cadran_simulatfontMare {
+  -webkit-appearance: none;  /* pentru Chrome și Safari */
+  -moz-appearance: none;  /* pentru Firefox */
+  appearance: none;
+  background: transparent;  /* fundalul transparent */
+  border: none;  /* fără bordură */
+  color: green;  /* culoarea textului */
+  text-shadow: 1px 1px 2px #000000;  /* umbra textului */
+  text-align: center;
+  text-align-last: center;  /* Pentru Firefox */
+  overflow: hidden;
+  padding: 10px;
+  object-fit: contain; /* Menține proporțiile imaginii și o încadrează complet în chenar */
+}
+
+.iframe-chenar {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: none;
+    display: block;
+    overflow: hidden; /* Ascunde bara de scroll */
+}
+
+#idChenar {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Stil pentru containerul ce deține rândurile de imagini */
+.rand-imagine {
+  display: flex;
+  justify-content: space-around; /* pentru a distribui spațiul între imagini */
+  margin-bottom: 5px; /* pentru spațiu între rândurile de imagini */
+  display: none; /* inițial rândurile nu sunt afișate */
+}
+
+/* Stil pentru fiecare imagine individuală din rând */
+.imagine-chenar {
+  max-width: calc(33.333% - 10px); /* pentru a se asigura că sunt trei imagini pe rând, minus spațiul dintre ele */
+  height: auto; /* pentru a menține proporția imaginilor */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* opțional, pentru a adăuga un efect ușor de umbra sub imagini */
+}
+
+#id4kCadran {
+    width: 97%; /* sau o altă valoare procentuală dorită */
+    height: auto; /* pentru a păstra proporțiile */
+    display: block; /* pentru a anula display: none; */
+}
+
+/*pentru Orar*/
+orar_tabel {
+    width: 100%;
+    border-collapse: collapse;
+}
+orar_tabel, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    background-color: #f2f2f2;
+}
+.orar-tabel {
+    margin-bottom: 20px; /* Adaugă spațiu în partea de jos a tabelului */
+}
+
+
+.exemplu-eticheta {
+    margin-top: 20px;
+    padding-top: 40px; /* Ajustează acest valorile după nevoie */
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #f0ad4e; /* O culoare de fundal */
+    color: white; /* Culoarea textului */
+    padding: 5px 10px; /* Padding în interiorul etichetei */
+    border-radius: 5px; /* Colțuri rotunjite */
+    display: inline-block; /* Pentru a afișa blocul inline */
+    margin-bottom: 10px; /* Spațiu sub etichetă */
+}
+
+.chenar_mare, .chenar_mic {
+    width: 80%; /* sau orice procentaj dorit */
+    height: 50%; /* ajustează înălțimea în funcție de conținut */
+    overflow: hidden; /* ascunde conținutul care depășește dimensiunile chenarului */
+    margin: 0 auto; /* centrează chenarul */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* adaugă o umbră ușoară */
+}
+
+.chenar_mic {
+    width: 30%; /* o lățime mai mică pentru chenarele mai mici */
+}
+.chenar_mare, .chenar_mic {
+    text-align: center; /* Centrează textul */
+    overflow-wrap: break-word; /* Întrerupe textul la limita chenarului */
+    padding: 10px; /* Adaugă un spațiu în interiorul chenarului pentru a nu lipi textul de margini */
+}
+
+/* Asigură-te că imaginile se adaptează la dimensiunea chenarului */
+.chenar_mare img, .chenar_mic img {
+    max-width: 100%;
+    height: 50%;
+    object-fit: contain; /* asigură că imaginile își păstrează proporțiile */
+}
+.chenar_mare iframe, .chenar_mic iframe,
+.chenar_mare video, .chenar_mic video {
+    width: 100%; /* Se extinde pe toată lățimea chenarului */
+    height: 50%; /* Înălțimea se ajustează pentru a păstra proporțiile */
+    object-fit: contain; /* Asigură că tot conținutul este vizibil, chiar dacă trebuie să fie redus */
+}
+
+/* Pentru titlurile mici */
+.cadran_simulatfontMic {
+  color: #101010; /* Schimbă culoarea textului */
+  font-size: 14px; /* Dimensiunea fontului */
+  text-align: left; /* Aliniază textul la centru */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adaugă o umbră textului */
+  /*animation: pulse 2s infinite; /* Aplică animația de pulsare */*/
+}
+
+/* Pentru titlurile mari */
+.cadran_simulatfontMare {
+  color: #000000; /* Schimbă culoarea textului */
+  font-size: 18px; /* Dimensiunea fontului */
+  text-align: center; /* Aliniază textul la centru */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adaugă o umbră textului */
+  /*animation: pulse 2s infinite; /* Aplică animația de pulsare */*/
+}
+
+/* Definirea animației pulse */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

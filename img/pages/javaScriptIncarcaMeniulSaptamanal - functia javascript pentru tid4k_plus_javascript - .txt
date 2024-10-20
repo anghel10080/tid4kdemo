@@ -1,0 +1,219 @@
+$javascriptIncarcaMeniulSaptamanal = "\n\n<script>\n" .
+    "function incarcaMeniulSaptamanal() {\n" .
+    "    var xhr = new XMLHttpRequest();\n" .
+    "    xhr.open('GET', '../pages/tabel_meniu_afisat.php', true);\n" .
+    "    xhr.onload = function() {\n" .
+    "        if (this.status == 200) {\n" .
+    "            document.getElementById('chenar1Rand2').innerHTML = this.responseText;\n" .
+    "            actualizeazaOre();\n" .
+    "            initializeazaSalvareaLocala();\n" .
+    "            actualizeazaAnteturileTabelului();\n" .
+    "            adaugaEmoji();\n" .
+    "        }\n" .
+    "    };\n" .
+    "    xhr.send();\n" .
+    "}\n" .
+    "document.addEventListener('DOMContentLoaded', incarcaMeniulSaptamanal);\n" .
+
+    "// Definește seturile de ore\n" .
+    "var setOre1 = ['08:15', '10:00', '12:00', '15:15', '19:00'];\n" .
+    "var setOre2 = ['09:00', '10:30', '12:30', '16:00'];\n" .
+
+    "function actualizeazaOre(oraSelectata) {\n" .
+    "    var setSelectat;\n" .
+
+    "    if (['08:15', '10:00', '12:00', '15:15', '19:00'].includes(oraSelectata)) {\n" .
+    "        setSelectat = setOre1;\n" .
+    "    } else if (['09:00', '10:30', '12:30', '16:00'].includes(oraSelectata)) {\n" .
+    "        setSelectat = setOre2;\n" .
+    "    } else {\n" .
+    "        return;\n" .
+    "    }\n\n" .
+
+    "    var campuriOra = document.querySelectorAll('textarea.oraInput');\n" .
+    "    var meniuInputuri = document.querySelectorAll('table tr td:nth-child(n+2) textarea.inputText');\n\n" .
+
+    "    setSelectat.forEach(function(ora, index) {\n" .
+    "        if (campuriOra[index] !== undefined) {\n" .
+    "            campuriOra[index].value = ora;\n" .
+    "        }\n" .
+    "    });\n\n" .
+
+    "    var tabel = document.querySelector('table');\n" .
+    "    while (tabel.rows.length - 1 > setSelectat.length) {\n" .
+    "        tabel.deleteRow(-1);\n" .
+    "    }\n" .
+    "    var indexMeniu = 0;\n" .
+    "    while (tabel.rows.length - 1 < setSelectat.length) {\n" .
+    "        var randNou = tabel.insertRow(-1);\n" .
+    "        for (var i = 0; i < 6; i++) {\n" .
+    "            var celulaNoua = randNou.insertCell(i);\n" .
+    "            if (i === 0) {\n" .
+    "                celulaNoua.innerHTML = `<textarea class="inputText oraInput" oninput="actualizeazaOre(this.value)">${setSelectat[tabel.rows.length - 2]}</textarea>`;\n" .
+    "            } else {\n" .
+    "                var valoareMeniu = meniuInputuri.length > indexMeniu ? meniuInputuri[indexMeniu].value : '';\n" .
+    "                celulaNoua.innerHTML = `<textarea class="inputText">${valoareMeniu}</textarea>`;\n" .
+    "                indexMeniu++;\n" .
+    "            }\n" .
+    "        }\n" .
+    "    }\n" .
+    "}\n\n" .
+
+// Cod pentru identificarea și afișarea automată a datei asociate zilei în antetul coloanelor din tabel
+"function actualizeazaAnteturileTabelului() {\n" .
+"    function adaugaZile(data, zile) {\n" .
+"        var rezultat = new Date(data);\n" .
+"        rezultat.setDate(rezultat.getDate() + zile);\n" .
+"        return rezultat;\n" .
+"    }\n\n" .
+"    function obtinePrimaZiASaptamanii(data) {\n" .
+"        var zi = data.getDay();\n" .
+"        var diferenta = data.getDate() - zi + (zi === 0 ? -6 : 1);\n" .
+"        return new Date(data.setDate(diferenta));\n" .
+"    }\n\n" .
+"    var dataCurenta = new Date();\n" .
+"    var ziuaCurentaSaptamanii = dataCurenta.getDay();\n\n" .
+"    ziuaCurentaSaptamanii = (ziuaCurentaSaptamanii === 0) ? 7 : ziuaCurentaSaptamanii;\n" .
+"    var primaZi = obtinePrimaZiASaptamanii(dataCurenta);\n\n" .
+"    for (var i = 1; i <= 5; i++) {\n" .
+"        var dataZilei = adaugaZile(primaZi, i - 1);\n" .
+"        var dataFormatata = dataZilei.toLocaleDateString('ro-RO', { day: '2-digit', month: 'long' });\n" .
+"        var ziuaSaptamanii = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri'][i - 1];\n" .
+"        var th = document.querySelector(`table tr th:nth-child(${i + 1})`);\n" .
+"        th.textContent = `${ziuaSaptamanii} (${dataFormatata})`;\n" .
+"        if (i === ziuaCurentaSaptamanii) {\n" .
+"        var celule = document.querySelectorAll(`table tr td:nth-child(${i + 1}), table tr th:nth-child(${i + 1})`);\n" .
+"        celule.forEach(function(celula) {\n" .
+"        celula.style.backgroundColor = '#D3D3D3';\n" .
+"        });\n" .
+"        }\n" .
+"    }\n\n" .
+"}\n\n" .
+"document.addEventListener('DOMContentLoaded', actualizeazaAnteturileTabelului);\n" .
+
+"function adaugaEmoji() {\n" .
+"    const cuvinteCheie = {\n" .
+"    'almette': 'Almette 🧈(35gr) ',\n" .
+"    'ananas': 'Ananas 🍍(50gr)',\n" .
+"    'banana': 'Banană 🍌(1buc)',\n" .
+"    'biscuiti': 'Biscuiți 🍪',\n" .
+"    'branza': 'brânza 🧀(35gr)',\n" .
+"    'broccoli': 'broccoli 🥦',\n" .
+"    'burger': 'Burger 🍔(100gr)',\n" .
+"    'capsuni': 'Căpșuni 🍓(50gr)',\n" .
+"    'cartofi': 'cartofi 🥔(250gr)',\n" .
+"    'cascaval': 'cașcaval 🧀(35gr)',\n" .
+"    'ceai': 'Ceai ☕(300ml) ',\n" .
+"    'ceapa': 'ceapă 🧅',\n" .
+"    'cereale': 'Cereale 🥣(250gr) ',\n" .
+"    'chec': 'Chec 🍰(60gr)',\n" .
+"    'ciocolata': 'Ciocolată 🍫',\n" .
+"    'ciocolată': 'Ciocolată 🍫',\n" .
+"    'ciorba': 'Ciorbă 🍲(250ml) ',\n" .
+"    'ciorbă': 'Ciorbă 🍲(250ml) ',\n" .
+"    'cozonac': 'Cozonac 🍞(60gr)',\n" .
+"    'dulceata': 'dulceață 🍯(30gr)',\n" .
+"    'dulceață': 'dulceață 🍯(30gr)',\n" .
+"    'fasole': 'Fasole 🥘(250gr) ',\n" .
+"    'gogosi': 'gogosi 🍩(60gr)',\n" .
+"    'iaurt': 'Iaurt 🥛(60ml)',\n" .
+"    'inghetata': 'Înghețată 🍨',\n" .
+"    'kiwi': 'Kiwi 🥝',\n" .
+"    'lamaie': 'lămâie 🍋',\n" .
+"    'legume': 'legume 🥗(60gr)',\n" .
+"    'mamaliga': 'Mămăligă 🫓(250gr) ',\n" .
+"    'mar': 'Măr 🍎(1buc)',\n" .
+"    'mandarina': 'Mandarină 🍊(1buc)',\n" .
+"    'mazare': 'Mazăre 🌱(250gr)',\n" .
+"    'morcovi': 'morcovi 🥕',\n" .
+"    'omleta': 'Omletă 🍳(100gr) ',\n" .
+"    'ou': 'ou 🥚',\n" .
+"    'paine': 'pâine 🍞(30gr)',\n" .
+"    'pasta': 'Paste 🍝(250gr) ',\n" .
+"    'paste': 'Paste 🍝(250gr) ',\n" .
+"    'pate': 'pate 🧈(35gr)',\n" .
+"    'patrunjel': 'pătrunjel 🌿',\n" .
+"    'peste': 'pește 🐟(85gr)',\n" .
+"    'pizza': 'Pizza 🍕(60gr)',\n" .
+"    'placinta': 'Plăcintă 🥧(60gr)',\n" .
+"    'portocala': 'Portocala 🍊(1buc)',\n" .
+"    'prajitura': 'Prăjitură 🍰(60gr)',\n" .
+"    'pui': 'pui 🍗(85gr)',\n" .
+"    'ridiche': 'ridiche 🍅',\n" .
+"    'rosie': 'roșie 🍅',\n" .
+"    'salata': 'salată 🥗(60gr)',\n" .
+"    'struguri': 'Struguri 🍇(50gr)',\n" .
+"    'suc': 'Suc 🧃(60ml)',\n" .
+"    'supa': 'Supă 🍜(250ml)',\n" .
+"    'sunca': 'șuncă 🍖(35gr)',\n" .
+"    'tartina': 'Tartină 🥪(30gr) ',\n" .
+"    'usturoi': 'usturoi 🧄',\n" .
+"    'unt': 'unt 🧈(15gr) ',\n" .
+"    'varza': 'varză 🥬',\n" .
+"    'tocanita': 'Tocăniță 🥘(250gr) ',\n" .
+"    'tocăniță': 'Tocăniță 🥘(250gr) ',\n" .
+"    };\n\n" .
+
+"document.querySelectorAll('textarea.inputText').forEach(function(textarea) {\n" .
+"    textarea.addEventListener('input', function(e) {\n" .
+"        if (e.inputType === 'deleteContentBackward' || textarea.value.slice(-1) === \\\" \\\") {\n" .
+"            return;\n" .
+"        }\n" .
+"        let text = textarea.value;\n" .
+"        Object.keys(cuvinteCheie).forEach(function(cuvant) {\n" .
+"            const regex = new RegExp(cuvant + '(?!\\\\s*🥣|\\\\s*🍲|\\\\s*🍜|\\\\s*🍽️|\\\\s*🥘|\\\\s*🍞|\\\\s*🍎|\\\\s*🍰|\\\\s*🍗|\\\\s*🐟|\\\\s*🥗|\\\\s*🥔|\\\\s*🍕|\\\\s*🍝|\\\\s*🍔|\\\\s*🧃|\\\\s*🥪|\\\\s*🫓|\\\\s*🍫|\\\\s*🍖|\\\\s*🍅|\\\\s*🍌|\\\\s*🍍|\\\\s*🧀|\\\\s*🥕|\\\\s*🧅|\\\\s*🧄|\\\\s*🌿|\\\\s*🍵|\\\\s*🍓|\\\\s*🍋|\\\\s*🍊|\\\\s*🥝|\\\\s*🍇|\\\\s*🍳|\\\\s*🍨|\\\\s*🥛|\\\\s*🍪|\\\\s*🍰|\\\\s*🍞|\\\\s*🥧|\\\\s*🍩|\\\\s*🍖|\\\\s*🍯|\\\\s*🍑|\\\\s*☕|\\\\s*🥗|\\\\s*🥚|\\\\s*🥬|\\\\s*🥦|\\\\s*🧈|\\\\s*🌱)', 'gi');\n" .
+"            text = text.replace(regex, cuvinteCheie[cuvant]);\n" .
+"        });\n" .
+"        textarea.value = text;\n" .
+"    });\n" .
+"});\n\n" .
+"}\n\n" .
+
+// Apelăm funcția la încărcarea paginii pentru a activa listener-ul
+"document.addEventListener('DOMContentLoaded', adaugaEmoji);\n" .
+
+    // Salvarea locală a datelor modificate în câmpurile de input
+    "function initializeazaSalvareaLocala() {\n" .
+    "//culori diferite pentru zilele saptamanii\n" .
+    "const zile = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri'];\n" .
+    "const culori = ['#FF00FF', '#32CD32', '#FFA500', '#1E90FF', '#FF69B4']; // Magenta, Verde, Portocaliu, Albastru, Roz\n" .
+
+    "const thElements = document.querySelectorAll('table tr th');\n" .
+    "thElements.forEach(function(th, index) {\n" .
+    "if (index > 0 && index <= zile.length) { // Ignoră prima celulă ('Ora') și se aplică doar pentru zilele săptămânii\n" .
+    "th.style.color = culori[index - 1];\n" .
+    "}\n" .
+    "});\n" .
+
+    // Încărcarea datelor salvate
+    "    document.querySelectorAll('textarea.inputText').forEach(function(textarea, index) {\n" .
+    "        var salvat = localStorage.getItem('input_' + index);\n" .
+    "        if (salvat !== null) {\n" .
+    "            textarea.value = salvat;\n" .
+    "        }\n" .
+    "        textarea.addEventListener('input', function() {\n" .
+    "            localStorage.setItem('input_' + index, textarea.value);\n" .
+    "        });\n" .
+    "    });\n\n" .
+
+// ajustarea inaltimii celulei de tabel in functie de continut
+"   var textAreas = document.querySelectorAll('textarea.inputText');\n" .
+
+"   function adjustHeight(textArea) {\n" .
+"   textArea.style.height = 'auto';\n" .
+"   textArea.style.height = textArea.scrollHeight + 'px';\n" .
+"   }\n\n" .
+
+"   textAreas.forEach(function(textArea) {\n" .
+"   adjustHeight(textArea);\n" .
+"   textArea.addEventListener('input', function() {\n" .
+"   adjustHeight(textArea);\n" .
+"   });\n" .
+"   });\n\n" .
+"}\n\n" .
+
+    "document.addEventListener('DOMContentLoaded', function() {\n" .
+    "    actualizeazaOre();\n" . // Inițializează evenimentele legate de ore la încărcarea paginii.
+    "    initializeazaSalvareaLocala();\n" . // Inițializează salvarea locală la încărcarea paginii.
+    "});\n" .
+    "</script>\n";

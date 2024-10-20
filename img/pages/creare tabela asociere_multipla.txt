@@ -1,0 +1,18 @@
+DROP TABLE asociere_multipla;
+-------------------------------------------------
+
+CREATE TABLE asociere_multipla (
+  id_asociativ int(11) NOT NULL AUTO_INCREMENT,
+  id_utilizator int(11) DEFAULT NULL,
+  id_copil int(11) DEFAULT NULL,
+  grupa_clasa_copil varchar(255) DEFAULT NULL,
+  index_grupa_clasa_curenta int(11) DEFAULT NULL,
+  numar_grupe_clase_utilizator int(11) DEFAULT NULL,
+  PRIMARY KEY (id_asociativ),
+  KEY id_utilizator (id_utilizator),
+  KEY id_copil (id_copil),
+  KEY asociere_multipla_ibfk_3 (grupa_clasa_copil),
+  CONSTRAINT asociere_multipla_ibfk_1 FOREIGN KEY (id_utilizator) REFERENCES utilizatori (id_utilizator),
+  CONSTRAINT asociere_multipla_ibfk_2 FOREIGN KEY (id_copil) REFERENCES copii (id_copil),
+  CONSTRAINT asociere_multipla_ibfk_3 FOREIGN KEY (grupa_clasa_copil) REFERENCES copii (grupa_clasa_copil)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

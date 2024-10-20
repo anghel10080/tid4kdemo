@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Scroll Simulation</title>
+    <style>
+        body {
+            height: 2000px; /* Face pagina suficient de lungă pentru a permite scroll-ul */
+        }
+        .content {
+            width: 100%;
+            height: 100px;
+            background-color: orange;
+            margin: 50px 0;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+        }
+        .fixed-element {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fixed-element" id="fixedElement">Fixed Element</div>
+<div class="content">Scroll to see the effect</div>
+<div class="content">Scroll to see the effect</div>
+<div class="content">Scroll to see the effect</div>
+<div class="content">Scroll to see the effect</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Funcția de simulare a scroll-ului
+        const simulateScroll = () => {
+            window.scrollBy(0, 100); // Scroll down
+            setTimeout(() => {
+                window.scrollBy(0, -100); // Scroll back up
+            }, 500); // Așteptăm 500ms înainte de a face scroll înapoi
+        };
+
+        // Simulăm scroll-ul la sfârșitul încărcării paginii pentru a recalibra elementele fixe
+        setTimeout(simulateScroll, 1000); // Așteptăm 1s pentru a ne asigura că pagina este complet încărcată
+    });
+</script>
+
+</body>
+</html>

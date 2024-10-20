@@ -1,0 +1,202 @@
+Log for:/srv/http/tid4k/
+# timestamp | duration | file | instruction | dir | modtime | etag | size | fileId | status | errorString | http result code | other size | other modtime | X-Request-ID
+#=#=#=# Syncrun started 2023-03-02T19:02:34Z
+#=#=#=#=# Propagation starts 2023-03-02T19:02:38Z (last step: 4598 msec , total: 4598 msec) 
+2023-03-02T19:02:39Z | pages/config.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677351557 | 80452e69ba0bf33178b69ae78a698a01 | 331 | 00194659oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | fde5cb15-ba63-4158-b28e-fa200e79c4fa | 
+2023-03-02T19:02:39Z | include/qr_code_generator.varianta2.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677432359 | ba0d6e6caa78c6d4651a4e8e43681c8d | 989 | 00194660oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | 96ebf1ad-69c4-4e70-a0b8-cc7063a70e14 | 
+2023-03-02T19:02:39Z | include/qr_code_generator.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677431450 | 0509bcd1cad0d052430efb93cadac577 | 614 | 00194661oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | 511c660a-e4bc-4c97-b01a-5eb484be1a09 | 
+2023-03-02T19:02:39Z | pages/welcome.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677438611 | 2e0179175422ccb0ac57c61acc1caf35 | 1025 | 00194662oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | c8d60020-6fbf-4185-92a4-f5734f6d89df | 
+2023-03-02T19:02:40Z | generate_qr.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677652769 | 887ab4f0546d3da4b38d7818835edfce | 279 | 00194536oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | a751cb5c-7930-4b5b-bf74-3a3df2b97337 | 
+2023-03-02T19:02:40Z | index.copie.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677484000 | 5cfc02b34caebcd3d343a6ea8a78c0c1 | 388 | 00194537oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | a9416c0b-545f-41d8-897e-b2a30d7c4f08 | 
+2023-03-02T19:02:40Z | phpinfo.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677679034 | e1f800207d86220a12e7147e161375fa | 20 | 00194538oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 667ce713-e1e1-4c54-b4b9-683771a7bddd | 
+2023-03-02T19:02:40Z | config.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677440596 | 21425260177b0b782eb3c5aee47b7b54 | 418 | 00194480oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 5e321a8e-ed63-4bb9-beef-8dfc2cef5ea5 | 
+2023-03-02T19:02:41Z | qr_code_generator.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677431450 | ba8473e9355a6ebb72b559852ae40305 | 614 | 00194468oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | c734fca5-a6d3-41d6-a984-6c4a3d483089 | 
+2023-03-02T19:02:41Z | qr_code_generator.varianta2.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677432359 | f0e159525802b8f1dacfadd88b065642 | 989 | 00194469oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | d7a1467f-3e06-4e42-81be-6838a92bc16e | 
+2023-03-02T19:02:41Z | qr_code.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677748519 | 85242f6518d8e5cee334d24b5d43d201 | 485 | 00194654oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 9ff4de8a-0ae7-4973-b37a-7ffada3b4062 | 
+2023-03-02T19:02:41Z | qr_code_id4k.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677744801 | d4628976227c49f27886b87c2e389f2f | 476 | 00194655oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 4eaba998-0f73-4cdd-aa50-a6e01ab3ea5b | 
+2023-03-02T19:02:41Z | welcome.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677438611 | 8f82f0bf38af249a3c00665b0d104cd0 | 1025 | 00194479oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 7850d949-406b-48d4-8898-1ea94c3edaa9 | 
+2023-03-02T19:02:41Z | readme.tid4k1.2.txt | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677776655 | 554f9bbdd74901d6f47961325919ef7e | 57980 | 00194657oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 4753164f-ec56-4f49-86ca-08997083ee39 | 
+#=#=#=# Syncrun finished 2023-03-02T19:02:41Z (last step: 2893 msec , total: 7492 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:08:33Z
+#=#=#=#=# Propagation starts 2023-03-02T19:08:34Z (last step: 777 msec , total: 777 msec) 
+#=#=#=# Syncrun finished 2023-03-02T19:08:34Z (last step: 13 msec , total: 790 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:21:53Z
+#=#=#=#=# Propagation starts 2023-03-02T19:21:54Z (last step: 416 msec , total: 416 msec) 
+2023-03-02T19:21:54Z | config.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677784910 | c8a166c1974df0f6e2d4385b2374feae | 489 | 00194480oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 418 | 1677440596 | b7558c5c-5b58-4057-ba28-096874dee782 | 
+#=#=#=# Syncrun finished 2023-03-02T19:21:54Z (last step: 483 msec , total: 900 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:22:04Z
+#=#=#=#=# Propagation starts 2023-03-02T19:22:04Z (last step: 409 msec , total: 409 msec) 
+#=#=#=# Syncrun finished 2023-03-02T19:22:04Z (last step: 9 msec , total: 418 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:28:18Z
+#=#=#=#=# Propagation starts 2023-03-02T19:28:19Z (last step: 384 msec , total: 384 msec) 
+2023-03-02T19:28:19Z | pages/pre_autorizare.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677785247 | 5ee77ee63dd828230269e1217c5cbae8 | 1384 | 00194476oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 3897 | 1677433921 | 4c3d464f-a5f4-410c-b159-eac442f89cf1 | 
+2023-03-02T19:28:19Z | functions.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677785095 | 3ef4f1773f0589e374e7ab00f35b857b | 921 | 00194664oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | 23ce184c-13c7-494b-a692-528fd5cf95e5 | 
+#=#=#=# Syncrun finished 2023-03-02T19:28:20Z (last step: 815 msec , total: 1199 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:34:10Z
+#=#=#=#=# Propagation starts 2023-03-02T19:34:11Z (last step: 890 msec , total: 890 msec) 
+#=#=#=# Syncrun finished 2023-03-02T19:34:11Z (last step: 11 msec , total: 901 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:39:44Z
+#=#=#=#=# Propagation starts 2023-03-02T19:39:44Z (last step: 397 msec , total: 397 msec) 
+2023-03-02T19:39:45Z | pages/default.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677785862 | e37e2922d96274d7ffa70dd29d462b97 | 1342 | 00194667oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | ed2927ea-a8d9-49fe-8701-5d8199cf0d77 | 
+#=#=#=# Syncrun finished 2023-03-02T19:39:45Z (last step: 901 msec , total: 1299 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:45:45Z
+#=#=#=#=# Propagation starts 2023-03-02T19:45:46Z (last step: 863 msec , total: 863 msec) 
+2023-03-02T19:45:46Z | pages/footer.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677786012 | 07cdef0dada3c73dc7c20da8ae367b94 | 64 | 00194668oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | a9478397-689e-486d-8141-e395eb508eb2 | 
+2023-03-02T19:45:46Z | pages/header.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677785998 | 03d0590589fa373c7a279cdd43f10c5a | 261 | 00194669oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | 130ec1ef-5bf9-4f3f-8ce2-9eff0285b79f | 
+#=#=#=# Syncrun finished 2023-03-02T19:45:46Z (last step: 911 msec , total: 1774 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:45:54Z
+#=#=#=#=# Propagation starts 2023-03-02T19:45:55Z (last step: 1205 msec , total: 1205 msec) 
+#=#=#=# Syncrun finished 2023-03-02T19:45:55Z (last step: 2 msec , total: 1208 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:55:32Z
+#=#=#=#=# Propagation starts 2023-03-02T19:55:33Z (last step: 402 msec , total: 402 msec) 
+2023-03-02T19:55:33Z | pages/grupa_mica.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677786929 | f88b0caf7a8bd61839cfd3d5755e8740 | 1098 | 00194670oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | 7fa1142a-5db2-4565-af6b-7763e473c414 | 
+#=#=#=# Syncrun finished 2023-03-02T19:55:33Z (last step: 789 msec , total: 1192 msec) 
+#=#=#=# Syncrun started 2023-03-02T19:55:53Z
+#=#=#=#=# Propagation starts 2023-03-02T19:55:54Z (last step: 701 msec , total: 701 msec) 
+2023-03-02T19:55:54Z | pages/style.css | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677786950 | a68f70aa843edb989dd1e23b9532282f | 312 | 00194671oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | 51019493-7c49-49be-b600-68d510bdc898 | 
+#=#=#=# Syncrun finished 2023-03-02T19:55:55Z (last step: 802 msec , total: 1504 msec) 
+#=#=#=# Syncrun started 2023-03-02T20:01:48Z
+#=#=#=#=# Propagation starts 2023-03-02T20:01:48Z (last step: 851 msec , total: 851 msec) 
+2023-03-02T20:01:49Z | pages/grupa_mare.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677787142 | ae164ed2fa8c399b40fbf9fce821797a | 1695 | 00194672oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | ebe93938-8aeb-4295-b3ca-0994a807d093 | 
+2023-03-02T20:01:49Z | pages/grupa_mijlocie.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677787047 | 0a89f7a57e024540c64eeab3387dec1a | 1233 | 00194673oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | 75042db5-3592-4c53-956c-211769d7f6b0 | 
+#=#=#=# Syncrun finished 2023-03-02T20:01:49Z (last step: 851 msec , total: 1703 msec) 
+#=#=#=# Syncrun started 2023-03-02T20:01:54Z
+#=#=#=#=# Propagation starts 2023-03-02T20:01:54Z (last step: 801 msec , total: 801 msec) 
+#=#=#=# Syncrun finished 2023-03-02T20:01:54Z (last step: 8 msec , total: 809 msec) 
+#=#=#=# Syncrun started 2023-03-02T20:12:26Z
+#=#=#=#=# Propagation starts 2023-03-02T20:12:26Z (last step: 425 msec , total: 425 msec) 
+#=#=#=# Syncrun finished 2023-03-02T20:12:26Z (last step: 3 msec , total: 428 msec) 
+#=#=#=# Syncrun started 2023-03-03T06:24:52Z
+#=#=#=#=# Propagation starts 2023-03-03T06:24:53Z (last step: 1148 msec , total: 1148 msec) 
+2023-03-03T06:24:54Z | pages/readme.tid4k_1.2.txt | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677823423 | 127a60f66c05a23441e219c802975cbb | 99522 | 00194674oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | fcb7274b-6f40-412e-b0bb-a20cd0944e17 | 
+#=#=#=# Syncrun finished 2023-03-03T06:24:54Z (last step: 403 msec , total: 1551 msec) 
+#=#=#=# Syncrun started 2023-03-03T06:31:01Z
+#=#=#=#=# Propagation starts 2023-03-03T06:31:02Z (last step: 710 msec , total: 710 msec) 
+ | pages/intampinare.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677097092 | b1f9de5882239cb378f3e2b71750efcf | 587 | 00194470oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 587 | 1677097092 |  | 
+ | pages/pre_autorizare.copie.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677161176 | ad52774be1cb292990c9bc99b16e222f | 482 | 00194472oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 482 | 1677161176 |  | 
+ | pages/pre_autorizare.copie2.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677162160 | b72203f8d17c3a6c3bfd6cf70f05a3f6 | 2634 | 00194473oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 2634 | 1677162160 |  | 
+ | pages/pre_autorizare.copie3.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677172291 | 4b9683332e92f113a0f3e3f398c938eb | 6345 | 00194474oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 6345 | 1677172291 |  | 
+ | pages/pre_autorizare.copy.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677162045 | e7edfdf821c5571d55cb07da12dcb282 | 3817 | 00194475oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 3817 | 1677162045 |  | 
+ | pages/pre_autorizare.qr_varianta.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677356521 | 1ac0ba9a9bbc6771ef95a89643fb93c1 | 4738 | 00194477oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 4738 | 1677356521 |  | 
+ | pages/procesare_inregistrare.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677152707 | d629e5fe5bf9b2fe6865fed06aefc65f | 628 | 00194478oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 628 | 1677152707 |  | 
+ | pages/welcome.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677438611 | 2e0179175422ccb0ac57c61acc1caf35 | 1025 | 00194662oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 1025 | 1677438611 |  | 
+ | generate_qr.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677652769 | 887ab4f0546d3da4b38d7818835edfce | 279 | 00194536oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 279 | 1677652769 |  | 
+ | index.copie.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677484000 | 5cfc02b34caebcd3d343a6ea8a78c0c1 | 388 | 00194537oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 388 | 1677484000 |  | 
+ | phpinfo.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677679034 | e1f800207d86220a12e7147e161375fa | 20 | 00194538oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 20 | 1677679034 |  | 
+ | qr_code_generator.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677431450 | ba8473e9355a6ebb72b559852ae40305 | 614 | 00194468oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 614 | 1677431450 |  | 
+ | qr_code_generator.varianta2.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677432359 | f0e159525802b8f1dacfadd88b065642 | 989 | 00194469oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 989 | 1677432359 |  | 
+#=#=#=# Syncrun finished 2023-03-03T06:31:02Z (last step: 23 msec , total: 734 msec) 
+#=#=#=# Syncrun started 2023-03-03T06:37:08Z
+#=#=#=#=# Propagation starts 2023-03-03T06:37:09Z (last step: 778 msec , total: 779 msec) 
+ | include/qr_code_generator.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677431450 | 0509bcd1cad0d052430efb93cadac577 | 614 | 00194661oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 614 | 1677431450 |  | 
+ | include/qr_code_generator.varianta2.php | SyncInstruction(CSYNC_INSTRUCTION_REMOVE) | OCC::SyncFileItem::Down | | 1677432359 | ba0d6e6caa78c6d4651a4e8e43681c8d | 989 | 00194660oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 0 | 989 | 1677432359 |  | 
+#=#=#=# Syncrun finished 2023-03-03T06:37:09Z (last step: 3 msec , total: 782 msec) 
+#=#=#=# Syncrun started 2023-03-03T06:43:27Z
+#=#=#=#=# Propagation starts 2023-03-03T06:43:27Z (last step: 480 msec , total: 480 msec) 
+#=#=#=# Syncrun finished 2023-03-03T06:43:27Z (last step: 2 msec , total: 482 msec) 
+#=#=#=# Syncrun started 2023-03-03T07:43:31Z
+#=#=#=#=# Propagation starts 2023-03-03T07:43:32Z (last step: 393 msec , total: 393 msec) 
+2023-03-03T07:43:32Z | welcome.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Down | | 1677829368 | a4955db20f0494787bf166c533e03321 | 801 | 00194479oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 1025 | 1677438611 | f74d06c7-ec93-4b2f-a16c-7f9e2e7d96b6 | 
+#=#=#=# Syncrun finished 2023-03-03T07:43:32Z (last step: 708 msec , total: 1102 msec) 
+#=#=#=# Syncrun started 2023-03-03T07:50:16Z
+#=#=#=#=# Propagation starts 2023-03-03T07:50:17Z (last step: 1286 msec , total: 1286 msec) 
+#=#=#=# Syncrun finished 2023-03-03T07:50:17Z (last step: 2 msec , total: 1288 msec) 
+#=#=#=# Syncrun started 2023-03-03T09:50:21Z
+#=#=#=#=# Propagation starts 2023-03-03T09:50:21Z (last step: 466 msec , total: 466 msec) 
+#=#=#=# Syncrun finished 2023-03-03T09:50:21Z (last step: 3 msec , total: 469 msec) 
+#=#=#=# Syncrun started 2023-03-03T11:50:26Z
+#=#=#=#=# Propagation starts 2023-03-03T11:50:26Z (last step: 447 msec , total: 447 msec) 
+#=#=#=# Syncrun finished 2023-03-03T11:50:26Z (last step: 3 msec , total: 451 msec) 
+#=#=#=# Syncrun started 2023-03-03T13:03:41Z
+#=#=#=#=# Propagation starts 2023-03-03T13:03:42Z (last step: 498 msec , total: 499 msec) 
+2023-03-03T13:03:42Z | db.sql | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Down | | 1677848609 | 829dd2b8030eec627cb7ca46bb354cc3 | 1215 | 00194680oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 250df2d8-5e80-46f5-8fc0-238d6a725e4e | 
+#=#=#=# Syncrun finished 2023-03-03T13:03:42Z (last step: 315 msec , total: 814 msec) 
+#=#=#=# Syncrun started 2023-03-03T14:18:51Z
+#=#=#=#=# Propagation starts 2023-03-03T14:18:51Z (last step: 475 msec , total: 475 msec) 
+#=#=#=# Syncrun finished 2023-03-03T14:18:51Z (last step: 3 msec , total: 479 msec) 
+#=#=#=# Syncrun started 2023-03-03T14:18:53Z
+#=#=#=#=# Propagation starts 2023-03-03T14:18:54Z (last step: 496 msec , total: 496 msec) 
+#=#=#=# Syncrun finished 2023-03-03T14:18:54Z (last step: 2 msec , total: 499 msec) 
+#=#=#=# Syncrun started 2023-03-03T14:22:03Z
+#=#=#=#=# Propagation starts 2023-03-03T14:22:03Z (last step: 498 msec , total: 498 msec) 
+2023-03-03T14:22:04Z | index.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677853320 | 1ffe488f9fee432590af56e4c2b307ac | 3468 | 00194466oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 295 | 1677440862 | ad4b5303-7c02-46cf-a648-467f57231131 | 
+#=#=#=# Syncrun finished 2023-03-03T14:22:04Z (last step: 500 msec , total: 998 msec) 
+#=#=#=# Syncrun started 2023-03-03T14:22:21Z
+#=#=#=#=# Propagation starts 2023-03-03T14:22:22Z (last step: 454 msec , total: 454 msec) 
+#=#=#=# Syncrun finished 2023-03-03T14:22:22Z (last step: 4 msec , total: 459 msec) 
+#=#=#=# Syncrun started 2023-03-03T14:27:59Z
+#=#=#=#=# Propagation starts 2023-03-03T14:28:00Z (last step: 394 msec , total: 394 msec) 
+2023-03-03T14:28:00Z | welcome.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677853477 | d78d589dfa1baabebe7a2bb1cac3c93b | 799 | 00194479oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 801 | 1677829368 | ddcf381d-35ba-420c-9e84-0b3e0a5c89d6 | 
+#=#=#=# Syncrun finished 2023-03-03T14:28:00Z (last step: 352 msec , total: 747 msec) 
+#=#=#=# Syncrun started 2023-03-03T14:34:16Z
+#=#=#=#=# Propagation starts 2023-03-03T14:34:16Z (last step: 506 msec , total: 506 msec) 
+2023-03-03T14:34:17Z | index.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677854022 | 264b687e3114f8b6533d403ba6fced9b | 1834 | 00194466oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 3468 | 1677853320 | 88a61f60-2a06-4660-bf9e-0ffa2c7867a2 | 
+2023-03-03T14:34:17Z | index.copie.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677853930 | 3112d6b1c8c11d8cbc0f981d53ab3de6 | 3468 | 00194683oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | 06e13c2d-3dbc-4cf7-aea9-ba56d0f1e269 | 
+2023-03-03T14:34:17Z | index.tid4k_1.4.php | SyncInstruction(CSYNC_INSTRUCTION_NEW) | OCC::SyncFileItem::Up | | 1677853916 | c54ad9d11d45a5ae3d1405ed10647751 | 1827 | 00194685oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 201 | 0 | 0 | e719ba08-57bf-4f73-8a93-c6019dbe9564 | 
+#=#=#=# Syncrun finished 2023-03-03T14:34:17Z (last step: 925 msec , total: 1431 msec) 
+#=#=#=# Syncrun started 2023-03-03T14:40:40Z
+#=#=#=#=# Propagation starts 2023-03-03T14:40:40Z (last step: 499 msec , total: 499 msec) 
+#=#=#=# Syncrun finished 2023-03-03T14:40:40Z (last step: 4 msec , total: 503 msec) 
+#=#=#=# Syncrun started 2023-03-03T16:40:46Z
+#=#=#=#=# Propagation starts 2023-03-03T16:40:46Z (last step: 419 msec , total: 419 msec) 
+#=#=#=# Syncrun finished 2023-03-03T16:40:46Z (last step: 5 msec , total: 424 msec) 
+#=#=#=# Syncrun started 2023-03-03T17:08:58Z
+#=#=#=#=# Propagation starts 2023-03-03T17:08:59Z (last step: 388 msec , total: 388 msec) 
+2023-03-03T17:09:01Z | pages/pre_autorizare.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677862815 | c35cb63064429e11a1491a5a478693d4 | 1388 | 00194476oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 1384 | 1677785247 | 52701c31-ca3f-476c-a005-a8b78050c6af | 
+#=#=#=# Syncrun finished 2023-03-03T17:09:01Z (last step: 2215 msec , total: 2604 msec) 
+#=#=#=# Syncrun started 2023-03-03T17:09:11Z
+#=#=#=#=# Propagation starts 2023-03-03T17:09:12Z (last step: 799 msec , total: 799 msec) 
+#=#=#=# Syncrun finished 2023-03-03T17:09:12Z (last step: 2 msec , total: 802 msec) 
+#=#=#=# Syncrun started 2023-03-03T17:23:37Z
+#=#=#=#=# Propagation starts 2023-03-03T17:23:37Z (last step: 463 msec , total: 463 msec) 
+2023-03-03T17:23:38Z | index.copie.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677864190 | b37cbb5ac027dd1a09d518679fc4491c | 1834 | 00194683oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 3468 | 1677853930 | c5eab9c2-8ef0-4877-8cb4-07af6c21953e | 
+2023-03-03T17:23:38Z | index.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677864205 | 2cba42fd4545c43ce9b76bee68d6c2c6 | 1834 | 00194466oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 1834 | 1677854022 | 839d83b4-a2b2-4aed-a375-69313f091272 | 
+#=#=#=# Syncrun finished 2023-03-03T17:23:38Z (last step: 609 msec , total: 1072 msec) 
+#=#=#=# Syncrun started 2023-03-03T17:23:41Z
+#=#=#=#=# Propagation starts 2023-03-03T17:23:42Z (last step: 474 msec , total: 474 msec) 
+#=#=#=# Syncrun finished 2023-03-03T17:23:42Z (last step: 4 msec , total: 478 msec) 
+#=#=#=# Syncrun started 2023-03-03T17:30:03Z
+#=#=#=#=# Propagation starts 2023-03-03T17:30:04Z (last step: 523 msec , total: 523 msec) 
+2023-03-03T17:30:04Z | index.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677864509 | af64e89532dc0133fc030a0f0570002d | 1661 | 00194466oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 1834 | 1677864205 | d808c876-5e1e-41fd-9d50-23174d06986f | 
+#=#=#=# Syncrun finished 2023-03-03T17:30:04Z (last step: 470 msec , total: 993 msec) 
+#=#=#=# Syncrun started 2023-03-03T17:36:46Z
+#=#=#=#=# Propagation starts 2023-03-03T17:36:46Z (last step: 494 msec , total: 494 msec) 
+#=#=#=# Syncrun finished 2023-03-03T17:36:46Z (last step: 3 msec , total: 498 msec) 
+#=#=#=# Syncrun started 2023-03-03T19:36:51Z
+#=#=#=#=# Propagation starts 2023-03-03T19:36:51Z (last step: 450 msec , total: 450 msec) 
+#=#=#=# Syncrun finished 2023-03-03T19:36:51Z (last step: 3 msec , total: 454 msec) 
+#=#=#=# Syncrun started 2023-03-03T21:36:56Z
+#=#=#=#=# Propagation starts 2023-03-03T21:36:56Z (last step: 441 msec , total: 441 msec) 
+#=#=#=# Syncrun finished 2023-03-03T21:36:56Z (last step: 3 msec , total: 444 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:23:09Z
+#=#=#=#=# Propagation starts 2023-03-03T22:23:09Z (last step: 495 msec , total: 495 msec) 
+2023-03-03T22:23:09Z | pages/pre_autorizare.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677882185 | 0015663b19336ce38de1b0cbb363c18a | 1382 | 00194476oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 1388 | 1677862815 | 8398776f-a315-42ff-9c6a-b5fd05891a32 | 
+#=#=#=# Syncrun finished 2023-03-03T22:23:10Z (last step: 445 msec , total: 940 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:28:20Z
+#=#=#=#=# Propagation starts 2023-03-03T22:28:21Z (last step: 870 msec , total: 870 msec) 
+2023-03-03T22:28:21Z | index.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677882285 | 088f8da0cc8a9910f16260cd870e3e02 | 1654 | 00194466oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 1661 | 1677864509 | 7d06830d-a55d-42cc-ae72-c57abc71c018 | 
+#=#=#=# Syncrun finished 2023-03-03T22:28:21Z (last step: 378 msec , total: 1248 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:33:38Z
+#=#=#=#=# Propagation starts 2023-03-03T22:33:39Z (last step: 521 msec , total: 521 msec) 
+#=#=#=# Syncrun finished 2023-03-03T22:33:39Z (last step: 3 msec , total: 525 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:40:03Z
+#=#=#=#=# Propagation starts 2023-03-03T22:40:03Z (last step: 455 msec , total: 455 msec) 
+2023-03-03T22:40:04Z | index.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677882930 | 524e4fff79b82a1c17853000273f208e | 1807 | 00194466oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 1654 | 1677882285 | e9d9516a-8c92-4b81-9321-d83df67327bc | 
+#=#=#=# Syncrun finished 2023-03-03T22:40:04Z (last step: 501 msec , total: 956 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:40:11Z
+#=#=#=#=# Propagation starts 2023-03-03T22:40:12Z (last step: 482 msec , total: 482 msec) 
+#=#=#=# Syncrun finished 2023-03-03T22:40:12Z (last step: 2 msec , total: 485 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:46:41Z
+#=#=#=#=# Propagation starts 2023-03-03T22:46:41Z (last step: 506 msec , total: 506 msec) 
+ | pages/pre_autorizare.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677883600 | 0015663b19336ce38de1b0cbb363c18a | 1383 | 00194476oc45wm5th3j3 | OCC::SyncFileItem::Message | Local file changed during sync. It will be resumed. | 0 | 1382 | 1677882185 |  | 
+#=#=#=# Syncrun finished 2023-03-03T22:46:41Z (last step: 4 msec , total: 510 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:46:43Z
+#=#=#=#=# Propagation starts 2023-03-03T22:46:43Z (last step: 507 msec , total: 507 msec) 
+#=#=#=# Syncrun finished 2023-03-03T22:46:43Z (last step: 3 msec , total: 510 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:53:11Z
+#=#=#=#=# Propagation starts 2023-03-03T22:53:12Z (last step: 615 msec , total: 615 msec) 
+2023-03-03T22:53:12Z | pages/pre_autorizare.php | SyncInstruction(CSYNC_INSTRUCTION_SYNC) | OCC::SyncFileItem::Up | | 1677883812 | df4d792e8af04578759b52fd753821ed | 1383 | 00194476oc45wm5th3j3 | OCC::SyncFileItem::Success |  | 204 | 1382 | 1677882185 | cae04778-e040-4cbe-bdf1-206de7668412 | 
+#=#=#=# Syncrun finished 2023-03-03T22:53:12Z (last step: 457 msec , total: 1073 msec) 
+#=#=#=# Syncrun started 2023-03-03T22:53:21Z
+#=#=#=#=# Propagation starts 2023-03-03T22:53:22Z (last step: 930 msec , total: 930 msec) 
+#=#=#=# Syncrun finished 2023-03-03T22:53:22Z (last step: 4 msec , total: 934 msec) 

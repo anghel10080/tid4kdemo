@@ -1,0 +1,156 @@
+var continut = ["sesiuni/tid4K_650745d9b9297//Gab Iarna dupa-amiaza cu _fb7ee82.jpg.jpg", /* restul elementelor */];
+
+continut = continut.map(function(element) {
+    var parti = element.split('.');
+    if (parti[parti.length - 1] === parti[parti.length - 2]) {
+        parti.pop(); // Elimină ultima parte
+        return parti.join('.'); // Reconstruiește șirul fără extensia duplicată
+    }
+    return element;
+});
+--------------------
+
+function extrageInformatii($cuvantCheie) {
+    global $conn;
+
+    if ($cuvantCheie == 'activitati') {
+        // Definirea grupelor și claselor
+        $cuvinteCheieGrupeClase = [
+            'grupa_mica', 'grupa_mijlocie', 'grupa_mare',
+            'clasa_pregatitoare', 'clasa_i', 'clasa_ii', 'clasa_iii', 'clasa_iv',
+            'clasa_v', 'clasa_vi', 'clasa_vii', 'clasa_viii', 'clasa_ix',
+            'clasa_x', 'clasa_xi', 'clasa_xii'
+        ];
+
+        // Iterează prin toate grupele și clasele pentru a extrage informații
+        foreach ($cuvinteCheieGrupeClase as $grupaClasa) {
+            $numeTabel = 'informatii_' . $grupaClasa;
+            $query = "SELECT nume_fisier, data_upload, id_utilizator FROM {$numeTabel} ORDER BY data_upload DESC LIMIT 10";
+
+            $result = mysqli_query($conn, $query);
+
+           $informatii = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Extrage și procesează temp_path pentru fiecare înregistrare
+        $id_utilizator = $row['id_utilizator'];
+        // Extrage temp_path pentru id_utilizator specific
+        $queryUtilizator = "SELECT temp_path FROM utilizatori WHERE id_utilizator = $id_utilizator";
+        $resultUtilizator = mysqli_query($conn, $queryUtilizator);
+        $rowUtilizator = mysqli_fetch_assoc($resultUtilizator);
+        $temp_path = str_replace('/srv/http/tid4k', '', $rowUtilizator['temp_path']);
+
+        // Construiește calea completă a fișierului
+        $caleFisier = $temp_path . $row['nume_fisier'];
+
+        // Adaugă calea fișierului la array-ul de informații
+        $informatii[] = $caleFisier;
+    }
+        }
+    } else {
+        // Procesare normală pentru cuvintele cheie care nu sunt "activitati"
+        $numeTabel = 'informatii_' . str_replace(' ', '_', $cuvantCheie);
+        $query = "SELECT nume_fisier, data_upload, id_utilizator FROM {$numeTabel} ORDER BY data_upload DESC LIMIT 10";
+
+        $result = mysqli_query($conn, $query);
+
+        $informatii = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Extrage și procesează temp_path pentru fiecare înregistrare
+        $id_utilizator = $row['id_utilizator'];
+        // Extrage temp_path pentru id_utilizator specific
+        $queryUtilizator = "SELECT temp_path FROM utilizatori WHERE id_utilizator = $id_utilizator";
+        $resultUtilizator = mysqli_query($conn, $queryUtilizator);
+        $rowUtilizator = mysqli_fetch_assoc($resultUtilizator);
+        $temp_path = str_replace('/srv/http/tid4k', '', $rowUtilizator['temp_path']);
+
+        // Construiește calea completă a fișierului
+        $caleFisier = $temp_path . $row['nume_fisier'];
+
+        // Adaugă calea fișierului la array-ul de informații
+        $informatii[] = $caleFisier;
+    }
+}
+
+    return $informatii;
+}
+
+// Funcția care prelucrează calea fișierului
+function prelucreazaCaleFisier($row) {
+    global $conn;
+    $id_utilizator = $row['id_utilizator'];
+    $queryUtilizator = "SELECT temp_path FROM utilizatori WHERE id_utilizator = $id_utilizator";
+    $resultUtilizator = mysqli_query($conn, $queryUtilizator);
+    $rowUtilizator = mysqli_fetch_assoc($resultUtilizator);
+    $temp_path = str_replace('/srv/http/tid4k', '', $rowUtilizator['temp_path']);
+    $caleFisier = $temp_path . $row['nume_fisier'];
+    return $caleFisier;
+}
+--------------------
+
+function extrageInformatii($cuvinteCheie) {
+    global $conn;
+    $informatii = [];
+
+    foreach ($cuvinteCheie as $cuvantCheie) {
+        // Presupunem că toate cuvintele cheie necesită 'informatii_' prefix
+        $numeTabel = 'informatii_' . str_replace(' ', '_', $cuvantCheie);
+
+        $query = "SELECT nume_fisier, data_upload, id_utilizator FROM {$numeTabel} ORDER BY data_upload DESC LIMIT 10";
+        $result = mysqli_query($conn, $query);
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            $id_utilizator = $row['id_utilizator'];
+            $queryUtilizator = "SELECT temp_path FROM utilizatori WHERE id_utilizator = $id_utilizator";
+            $resultUtilizator = mysqli_query($conn, $queryUtilizator);
+            $rowUtilizator = mysqli_fetch_assoc($resultUtilizator);
+            $temp_path = str_replace('/srv/http/tid4k', '', $rowUtilizator['temp_path']);
+
+            $caleFisier = $temp_path . $row['nume_fisier'];
+            $informatii[] = $caleFisier;
+        }
+    }
+
+    return $informatii;
+}
+
+
+$cuvinteCheieGrupeClase = ['grupa mica', 'grupa mijlocie', 'grupa mare', 'clasa pregatitoare', 'clasa i', 'clasa ii', 'clasa iii', 'clasa iv', 'clasa v', 'clasa vi', 'clasa vii', 'clasa viii', 'clasa ix', 'clasa x', 'clasa xi', 'clasa xii'];
+$informatiiActivitati = extrageInformatii($cuvinteCheieGrupeClase);
+--------------------------
+
+function extrageInformatii($cuvantCheie) {
+    global $conn; // Asigură-te că aceasta este conexiunea la baza de date activă
+
+    // Pregătește numele tabelului bazat pe cuvântul cheie
+    $numeTabel = 'informatii_' . str_replace(' ', '_', $cuvantCheie);
+
+    // Interogarea pentru a extrage ultimele 10 înregistrări
+    $query = "SELECT nume_fisier, data_upload, id_utilizator FROM {$numeTabel} ORDER BY data_upload DESC LIMIT 10";
+
+    $result = mysqli_query($conn, $query);
+
+    $informatii = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Extrage și procesează temp_path pentru fiecare înregistrare
+        $id_utilizator = $row['id_utilizator'];
+        // Extrage temp_path pentru id_utilizator specific
+        $queryUtilizator = "SELECT temp_path FROM utilizatori WHERE id_utilizator = $id_utilizator";
+        $resultUtilizator = mysqli_query($conn, $queryUtilizator);
+        $rowUtilizator = mysqli_fetch_assoc($resultUtilizator);
+        $temp_path = str_replace('/srv/http/tid4k', '', $rowUtilizator['temp_path']);
+
+        // Construiește calea completă a fișierului
+        $caleFisier = $temp_path . $row['nume_fisier'];
+
+        // Adaugă calea fișierului la array-ul de informații
+        $informatii[] = $caleFisier;
+    }
+
+    return $informatii;
+}
+
+
+//se foloseste in bucla foreach cu urmatorul cod
+ // Apelează funcția pentru a extrage informațiile
+                $informatiiExtrase = extrageInformatii($categorie);
+                $continutClasa = json_encode($informatiiExtrase);

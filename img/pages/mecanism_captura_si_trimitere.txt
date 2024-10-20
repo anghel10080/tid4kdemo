@@ -1,0 +1,50 @@
+<!--cod pentru captura continutului cadran-simulat si trimiterea catre genereaza_tid4k_html-->
+function captureAndSendCadranHTML() {
+    var cadranElement = document.getElementById('id4kCadran');
+
+    // Verifică dacă elementul există
+    if (cadranElement) {
+        // Captură întregul element, inclusiv etichetele exterioare
+        var cadranHTML = cadranElement.outerHTML;
+
+        // Log pentru depanare: afișează HTML-ul capturat în consolă
+        console.log("HTML capturat:", cadranHTML);
+
+        // Inițializează un nou XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "genereaza_tid4k_html.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhr.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                // Log pentru succes
+                console.log("Conținutul a fost trimis și procesat pe server.");
+                // Log pentru depanare: afișează răspunsul serverului
+                console.log("Răspuns server:", this.responseText);
+            }
+        };
+
+        // Trimiterea datelor către server
+        xhr.send("html=" + encodeURIComponent(cadranHTML));
+    } else {
+        // Log pentru eroare: elementul nu a fost găsit
+        console.error('Elementul #id4kCadran nu a fost găsit.');
+    }
+}
+
+
+//  ---varianta functionala ---
+// function captureAndSendCadranHTML() {
+//     var cadranHTML = document.getElementById('id4kCadran').innerHTML; // Ajustează ID-ul dacă este necesar
+//
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("POST", "genereaza_tid4k_html.php", true);
+//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//     xhr.onreadystatechange = function() {
+//         if (this.readyState === 4 && this.status === 200) {
+//             console.log("Conținutul a fost trimis și procesat pe server.");
+//         }
+//     };
+//     xhr.send("html=" + encodeURIComponent(cadranHTML));
+// }
+

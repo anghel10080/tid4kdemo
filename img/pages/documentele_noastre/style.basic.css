@@ -1,0 +1,277 @@
+.body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #555;
+  font-size: 16px;
+}
+
+.col-stanga-titlu {
+  margin: 3;
+  color: green; /* Culoarea textului pentru titlul din stânga */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Umbra difuză a textului */
+  font-weight: bold; /* Grosimea fontului */
+  padding: 3px 5px; /* Padding în jurul textului */
+  background-color: rgba(255, 255, 255, 0.7); /* Fundal albicios difuz */
+  border-radius: 5px; /* Colțuri rotunjite pentru etichetă */
+  font-size: 15px; /* sau orice altă dimensiune care se potrivește */
+  text-align: center; /* Adăugați această linie pentru a centra titlul */
+}
+
+.col-dreapta-titlu {
+  margin: 3;
+  color: #7b4dbf; /* Culoarea textului pentru titlul din dreapta */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Umbra difuză a textului */
+  font-weight: bold; /* Grosimea fontului */
+  padding: 3px 5px; /* Padding în jurul textului */
+  background-color: rgba(255, 255, 255, 0.7); /* Fundal albicios difuz */
+  border-radius: 5px; /* Colțuri rotunjite pentru etichetă */
+}
+
+
+.nume-grupa {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 1.49rem;
+    color: violet;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.grupa-mica-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.footer-container {
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+.col-dreapta-titlu {
+  font-size: 15px; /* sau orice altă dimensiune care se potrivește */
+  text-align: center; /* Adăugați această linie pentru a centra titlul */
+}
+
+
+.upload_button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.download_button {
+    display: inline-block;
+    padding: 6px 9px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #7b4dbf; /* Alegeți o nuanță de violet care vă place */
+    border-color: #6a42b7; /* Alegeți o nuanță de violet care vă place */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1px;
+  margin-left: 1px;
+  position: sticky;
+  position: -webkit-sticky; /* Adăugați această linie pentru a oferi suport pentru Safari */
+  top: calc(85px + 30px + 600px + 10px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga + înălțimea iframe/img + o mică distanță între butoane și iframe/img */
+  z-index: 998;
+}
+}
+
+
+.file-name {
+    font-size: 1.1rem; /* Ajustați mărimea fontului pentru numele fișierului */
+    font-size: calc(0.7rem + 0.4vw);
+}
+
+.file-user-name {
+    font-size: 0.97rem; /* Ajustați mărimea fontului pentru numele și prenumele utilizatorului */
+}
+
+.file-date {
+    font-size: 0.79rem; /* Ajustați mărimea fontului pentru data și ora */
+}
+
+.hidden {
+    display: none;
+}
+
+.fixed-iframe {
+  position: sticky;
+  position: -webkit-sticky; /* Adăugați această linie pentru a oferi suport pentru Safari */
+  top: calc(85px + 30px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  z-index: 998;
+}
+
+.fixed-img {
+  position: sticky;
+  position: -webkit-sticky; /* Adăugați această linie pentru a oferi suport pentru Safari */
+  top: calc(85px + 30px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  z-index: 998;
+}
+
+
+.file-name-selected {
+    color: green; /* Alegeți culoarea dorită aici */
+}
+
+
+.column-left, .column-right {
+  flex: 1;
+  padding: 20px;
+}
+
+
+.file-item {
+    font-size: 1.1rem;
+}
+
+/* css-ul care se ocupa de stilizarea headerului - 11aprilie2023*/
+.header-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container .logo {
+  position: absolute;
+  top: 10px;
+  right: 20px; /* a crescut valoarea pentru a deplasa logo-ul spre stânga */
+  width: 3.5cm;
+  height: 1cm;
+  background-size: contain;
+  margin-right: 20px; /* adăugat marja la dreapta */
+}
+
+.header-container .grupa-mica-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-container .grupa-mica-wrapper a {
+  text-decoration: none;
+  color: #333;
+}
+
+.header-container .grupa-mica-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.profesori-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+  }
+
+.profesor-container {
+  text-align: left;
+  background-color: #ffffff;
+  padding: 10px 0;
+  z-index: 1000;
+  position: relative;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+.profesor-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  padding: 0 10px;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+.profesor-label,
+.profesor-nume {
+  margin-right: 5px;
+}
+
+.profesor-telefon {
+  margin-right: 5px;
+  font-size: 0.9em;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+.profesor-label {
+  color: gray;
+  font-size: 0.8em;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+
+.header-container .search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  width: 100%;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+  }
+
+.search-input {
+  width: 200px;
+  padding: 5px;
+  z-index: 1000;
+  position: relative;
+  border: 1px solid #cccccc; /* adăugat un border gri */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* adăugat un box-shadow gri */
+}
+
+
+.separator {
+  height: 1px;
+  background-color: #ccc;
+  width: 100%;
+  margin-top: 10px; /* adăugat pentru a crea spațiu între căutare și separator */
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+  z-index: 0; /* adăugat pentru a se asigura că separatorul este sub colStangaTitlu */
+  /* restul stilurilor separator */
+}

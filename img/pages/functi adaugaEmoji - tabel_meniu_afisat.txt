@@ -1,0 +1,82 @@
+function adaugaEmoji() {
+    const cuvinteCheie = {
+        'almette': 'Almette 🧈(35gr)',
+        'ananas': 'Ananas 🍍(50gr)',
+        'banan': 'Banană 🍌(1buc)',
+        'biscuit': 'Biscuiți 🍪',
+        'branza': 'brânza 🧀(35gr)',
+        'broccoli': 'broccoli 🧁(60gr)',
+        'brios': 'Briose 🧁(60gr)',
+        'burger': 'Burger 🍔(100gr)',
+        'capsuni': 'Căpșuni 🍓(50gr)',
+        'cartofi': 'cartofi 🥔(250gr)',
+        'cascaval': 'cașcaval 🧀(35gr)',
+        'ceai': 'Ceai ☕(300ml)',
+        'ceapa': 'ceapă 🧅',
+        'cereale': 'Cereale 🥣(250gr)',
+        'chec': 'Chec 🍰(60gr)',
+        'ciocolat': 'Ciocolată 🍫',
+        'ciorba': 'Ciorbă 🍲(250ml)',
+        'clatit': 'Clatite 🥞(60gr)',
+        'cozonac': 'Cozonac 🍞(60gr)',
+        'dulceat': 'dulceață 🍯(30gr)',
+        'fasole': 'Fasole 🥘(250gr)',
+        'gogosi': 'gogosi 🍩(60gr)',
+        'iaurt': 'Iaurt 🥛(60ml)',
+        'inghetata': 'Înghețată 🍨',
+        'kiwi': 'Kiwi 🥝',
+        'lamaie': 'lămâie 🍋',
+        'legume': 'legume 🥗(60gr)',
+        'mamaliga': 'Mămăligă 🫓(250gr)',
+        'mar': 'Măr 🍎(1buc)',
+        'mere': 'Măr 🍎(1buc)',
+        'mandarin': 'Mandarină 🍊(1buc)',
+        'mazare': 'Mazăre 🌱(250gr)',
+        'morcov': '🥕 Morcovi (50gr)',
+        'omleta': 'Omletă 🍳(100gr)',
+        'ou': 'ou 🥚',
+        'orez': 'Orez 🍚(250gr)',
+        'paine': 'pâine 🍞(30gr)',
+        'pasta': 'Paste 🍝(250gr)',
+        'paste': 'Paste 🍝(250gr)',
+        'pate': 'pate 🧈(35gr)',
+        'patrunjel': 'pătrunjel 🌿',
+        'peste': 'pește 🐟(85gr)',
+        'pizza': 'Pizza 🍕(60gr)',
+        'placinta': 'Plăcintă 🥧(60gr)',
+        'portocal': 'Portocala 🍊(1buc)',
+        'prajitura': 'Prăjitură 🍰(60gr)',
+        'pui': 'pui 🍗(85gr)',
+        'ridi': 'ridiche 🍅',
+        'rosie': 'roșie 🍅',
+        'salata': 'salată 🥗(60gr)',
+        'struguri': 'Struguri 🍇(50gr)',
+        'suc': 'Suc 🧃(60ml)',
+        'supa': 'Supă 🍜(250ml)',
+        'sunca': 'șuncă 🍖(35gr)',
+        'tartina': 'Tartină 🥪(30gr)',
+        'usturoi': 'usturoi 🧄',
+        'unt': 'unt 🧈(15gr)',
+        'varza': 'varză 🥬',
+        'tocanit': 'Tocăniță 🥘(250gr)',
+        // Continuă să adaugi aici restul cuvintelor cheie și emoji-urile corespunzătoare
+    };
+
+    var textAreas = document.querySelectorAll('textarea.inputText');
+    if (textAreas.length > 0) { // Verifică dacă există textarea-uri
+        textAreas.forEach(function(textarea, index) {
+            textarea.addEventListener('input', function() {
+                let text = textarea.value;
+                Object.keys(cuvinteCheie).forEach(function(cuvant) {
+                    const regex = new RegExp(cuvant + '(?!\\\\s*🥣|\\\\s*🍲|\\\\s*🍜|\\\\s*🍽️|\\\\s*🥘|\\\\s*🍞|\\\\s*🍎|\\\\s*🍰|\\\\s*🍗|\\\\s*🐟|\\\\s*🥗|\\\\s*🥔|\\\\s*🍕|\\\\s*🍝|\\\\s*🍔|\\\\s*🧃|\\\\s*🥪|\\\\s*🫓|\\\\s*🍫|\\\\s*🍖|\\\\s*🍅|\\\\s*🍌|\\\\s*🍍|\\\\s*🧀|\\\\s*🥕|\\\\s*🧅|\\\\s*🧄|\\\\s*🌿|\\\\s*🍵|\\\\s*🍓|\\\\s*🍋|\\\\s*🍊|\\\\s*🥝|\\\\s*🍇|\\\\s*🍳|\\\\s*🍨|\\\\s*🥛|\\\\s*🍪|\\\\s*🍰|\\\\s*🍞|\\\\s*🥧|\\\\s*🍩|\\\\s*🍖|\\\\s*🍯|\\\\s*🍑|\\\\s*☕|\\\\s*🥗|\\\\s*🥚|\\\\s*🥬|\\\\s*🥦|\\\\s*🧈|\\\\s*🌱)', 'gi');
+                                   text = text.replace(regex, cuvinteCheie[cuvant]);
+            });
+            textarea.value = text; // Actualizează textul cu emoji-urile adăugate
+
+            // Asigurați-vă că orice schimbare este imediat salvată
+            localStorage.setItem('input_' + index, text);
+        });
+    });
+}
+}
+

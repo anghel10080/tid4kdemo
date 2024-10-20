@@ -1,0 +1,13 @@
+{
+    "name": "cornel-laptop/tid4k",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "CornelLaptop\\Tid4k\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "chillerlan/php-qrcode": "^4.3"
+    }
+}

@@ -1,0 +1,188 @@
+require_once '../config.php';
+require_once 'functii_si_constante.php';
+  // Apelarea functiei pentru a umple variabilele de sesiune
+  determina_variabile_utilizator($conn);
+
+$htmlContent = file_get_contents($filePath);
+
+// Definește pattern-ul regex pentru a căuta cuvintele "grupa" și "clasa"
+$pattern = '/<div class="cadran_simulatfont(Mare|Mic) cadran_simulat_select">([^<]*?(grupa|clasa|activitati|administrative|imagini|documente|minister|inspectorat)[^<]*?)<\/div>\s*<div id="([^"]+)">/i';
+
+
+// Caută în conținutul HTML
+preg_match_all($pattern, $htmlContent, $matches, PREG_SET_ORDER);
+
+//variabile pentru stocarea cuvintele cautate
+$grupa_gasita = [];
+$clasa_gasita = [];
+$activitati_gasite = [];
+$administrative_gasite = [];
+$documente_gasite = [];
+$imagini_gasite = [];
+$minister_gasit = [];
+$inspectorat_gasit = [];
+
+//variabile pentru stocarea locurilor cuvintelor cautate
+$locul_gasit_grupa = [];
+$locul_gasit_clasa = [];
+$locul_gasit_activitati = [];
+$locul_gasit_administrative = [];
+$locul_gasit_imagini = [];
+$locul_gasit_documente = [];
+$locul_gasit_minister = [];
+$locul_gasit_inspectorat = [];
+
+foreach ($matches as $match) {
+
+    if (stripos($match[2], 'grupa') !== false) {
+        $grupa_gasita[] = $match[2]; // Stochează potrivirea pentru "grupa"
+        $locul_gasit_grupa[] = $match[3]; // Stochează ID-ul div-ului următor unde a fost găsită "grupa"
+    } elseif (stripos($match[2], 'clasa') !== false) {
+        $clasa_gasita[] = $match[2]; // Stochează potrivirea pentru "clasa"
+        $locul_gasit_clasa[] = $match[3]; // Stochează ID-ul div-ului următor unde a fost găsită "clasa"
+    } elseif (stripos($match[2], 'activitati') !== false) {
+        $activitati_gasite[] = $match[2]; // Stochează potrivirea pentru "activitati"
+        $locul_gasit_activitati[] = $match[3]; // Stochează ID-ul div-ului următor unde a fost găsit "activitati"
+    } elseif (stripos($match[2], 'administrative') !== false) {
+        $administrative_gasite[] = $match[2]; // Stochează potrivirea pentru "administrative"
+        $locul_gasit_administrative[] = $match[3]; // Stochează ID-ul div-ului următor unde a fost găsit "administrative"
+    } elseif (stripos($match[2], 'documente') !== false) {
+        $documente_gasite[] = $match[2]; // Stochează potrivirea pentru "documente"
+        $locul_gasit_documente[] = $match[3]; // Stochează ID-ul div-ului următor unde a fost găsit "documente"
+    } elseif (stripos($match[2], 'imagini') !== false) {
+        $imagini_gasite[] = $match[2]; // Stochează potrivirea pentru "imagini"
+        $locul_gasit_imagini[] = $match[3]; // Stochează ID-ul div-ului următor unde a fost găsit "imagini"
+    } elseif (stripos($match[2], 'minister') !== false) {
+        $minister_gasit[] = $match[2]; // Stochează potrivirea pentru "minister"
+        $locul_gasit_minister[] = $match[3]; // Stochează ID-ul div-ului următor unde a fost găsit "minister"
+    } elseif (stripos($match[2], 'inspectorat') !== false) {
+        $inspectorat_gasit[] = $match[2]; // Stochează potrivirea pentru "inspectorat"
+        $locul_gasit_inspectorat[] = $match[3]; // Stochează ID-ul div-ului următor unde a fost găsit "inspectorat"
+    }
+}
+
+// Listele de imagini și documente
+$imagini_grupa_mica = json_encode([
+    '/sesiuni/tid4K_6507455e20713/Toamna dupa-amiaza cu _1a74974.png',
+    '/sesiuni/tid4K_6507455e20713/Fetita cu Globul_Toamna dupa-amiaza cu _3020381.png',
+    '/sesiuni/tid4K_6507455e20713/Milan Toamna dupa-amiaza cu grupa mica_8ec490f.jpg'
+]);
+
+$imagini_clasa_XII = json_encode([
+    '/sesiuni/tid4K_64c40ec273d77/Alex Coyo Vara dupa-amiaza cu Gonzales_1402eaa.png',
+    '/sesiuni/tid4K_64c2a59d2192b/Vara dimineata cu Maya_966874a.jpg',
+    '/sesiuni/tid4K_64c2a59d2192b/Vara dupa-amiaza cu Maya_1b4efd8.jpg'
+]);
+
+$documente = json_encode([
+    '/sesiuni/tid4K_64c2a5b8b86b0/BRD Vara dupa-amiaza cu grupa mica_487e08d.pdf',
+    '/sesiuni/tid4K_64c2a5b8b86b0/Vara dupa-amiaza cu grupa mica_cf237a5.pdf',
+    '/sesiuni/tid4K_64c2a52b5b3fd/_Traffic_Toamna dimineata cu grupa mica_f827046.pdf'
+]);
+
+$administrative = json_encode([
+    '/sesiuni/tid4K_650cb1b14b653/MMA Toamna dimineata cu grupa mare_10733bc.pdf',
+    '/sesiuni/tid4K_650cb1b14b653/Toamna dupa-amiaza cu grupa mare_db28853.pdf',
+    '/sesiuni/tid4K_64c2a59d2192b/Vara dupa-amiaza cu Maya_f2ee778.pdf'
+]);
+
+//variabile pentru stocarea cuvintele cautate
+$grupa_gasita = [];
+$clasa_gasita = [];
+$activitati_gasite = [];
+$administrative_gasite = [];
+$documente_gasite = [];
+$imagini_gasite = [];
+$minister_gasit = [];
+$inspectorat_gasit = [];
+
+//variabile pentru stocarea locurilor cuvintelor cautate
+$locul_gasit_grupa = [];
+$locul_gasit_clasa = [];
+$locul_gasit_activitati = [];
+$locul_gasit_administrative = [];
+$locul_gasit_imagini = [];
+$locul_gasit_documente = [];
+$locul_gasit_minister = [];
+$locul_gasit_inspectorat = [];
+
+$continut_grupa_mica = json_encode([
+    '/sesiuni/tid4K_6507455e20713/Toamna dupa-amiaza cu _1a74974.png',
+    '/sesiuni/tid4K_6507455e20713/Fetita cu Globul_Toamna dupa-amiaza cu _3020381.png',
+    '/sesiuni/tid4K_650cb1b14b653/MMA Toamna dimineata cu grupa mare_10733bc.pdf',
+    '/sesiuni/tid4K_650cb1b14b653/Toamna dupa-amiaza cu grupa mare_db28853.pdf',
+    '/sesiuni/tid4K_64c2a59d2192b/Vara dupa-amiaza cu Maya_f2ee778.pdf',
+    '/sesiuni/tid4K_6507455e20713/Milan Toamna dupa-amiaza cu grupa mica_8ec490f.jpg'
+]);
+
+$locul_gasit_documente = json_encode(['chenar1Rand2']);
+$locul_gasit_grupa = json_encode(['chenar1Rand3']);
+$locul_gasit_clasa = json_encode(['chenar2Rand3']);
+$locul_gasit_administrative = json_encode(['chenar3Rand3']);
+
+
+// algoritmul javascript de inlocuire automata a continutului in zona de afisare indicata de $locul_gasit_json
+$javascriptContent =
+    "document.addEventListener('DOMContentLoaded', function() {\n" .
+    "    var imaginiGrupaMica = " . json_encode($imagini_grupa_mica) . ";\n" .
+    "    var documenteGrupaMica = " . json_encode($documente_grupa_mica) . ";\n" .
+    "    var loculGasitGrupa = " . $locul_gasit_grupa_json . ";\n" .
+    "    loculGasitGrupa.forEach(function(id) {\n" .
+    "        var zonaAfisare = document.getElementById(id);\n" .
+    "        // Logica de afisare a imaginilor sau documentelor\n" .
+    "        // Exemplu de afisare a primei imagini\n" .
+    "        var imgElement = document.createElement('img');\n" .
+    "        imgElement.src = imaginiGrupaMica[0]; // Primul element din lista de imagini\n" .
+    "        zonaAfisare.appendChild(imgElement);\n" .
+    "        // Aici puteti adauga logica pentru afisarea PDF-urilor folosind canvas\n" .
+    "    });\n" .
+    "});\n";
+
+
+    //algoritm care afiseaza combinat imagini si pdf in acelasi chenar id (exemplu id ="chenar1Rand3")
+   "document.addEventListener('DOMContentLoaded', function() {\n" .
+    "    var continut = " . $continut_grupa_mica . ";\n" . // Lista de conținut
+    "    var loculGasit = " . $locul_gasit_grupa . ";\n" . // Lista de ID-uri ale chenarelor
+    "    loculGasit.forEach(function(idChenar) {\n" .
+    "        var chenar = document.getElementById(idChenar);\n" .
+    "        var currentIndex = 0;\n" .
+    "        function afiseazaContinut() {\n" .
+    "            if(currentIndex >= continut.length) currentIndex = 0; // Resetează indexul dacă a ajuns la sfârșitul listei\n" .
+    "            chenar.innerHTML = '';\n" .
+    "            var elementContinut = continut[currentIndex];\n" .
+    "            var extensie = elementContinut.split('.').pop().toLowerCase();\n" .
+    "            if (extensie === 'png' || extensie === 'jpg' || extensie === 'jpeg') {\n" .
+    "                var imgElement = document.createElement('img');\n" .
+    "                imgElement.src = elementContinut;\n" .
+    "                chenar.appendChild(imgElement);\n" .
+    "                currentIndex++;\n" .
+    "                setTimeout(afiseazaContinut, 3000); // Schimbă după 3 secunde\n" .
+    "            } else if (extensie === 'pdf') {\n" .
+    "                var canvasElement = document.createElement('canvas');\n" .
+    "                chenar.appendChild(canvasElement);\n" .
+    "                // Încarcă PDF-ul aici\n" .
+    "                // După ce PDF-ul a fost complet încărcat și afișat, incrementează indexul și apelează afiseazaContinut\n" .
+    "                // De exemplu:\n" .
+    "                if (pdfjsLib && elementContinut) {\n" .
+    "                    pdfjsLib.getDocument(elementContinut).promise.then(function(pdfDoc) {\n" .
+    "                        pdfDoc.getPage(1).then(function(page) {\n" .
+    "                            var viewport = page.getViewport({scale: 0.5});\n" .
+    "                            canvasElement.height = viewport.height;\n" .
+    "                            canvasElement.width = viewport.width;\n" .
+    "                            var renderContext = {\n" .
+    "                                canvasContext: canvasElement.getContext('2d'),\n" .
+    "                                viewport: viewport\n" .
+    "                            };\n" .
+    "                            page.render(renderContext).promise.then(function() {\n" .
+    "                                currentIndex++;\n" .
+    "                                setTimeout(afiseazaContinut, 5000); // Schimbă după 5 secunde\n" .
+    "                            });\n" .
+    "                        });\n" .
+    "                    });\n" .
+    "                }\n" .
+    "            }\n" .
+    "        }\n" .
+    "        afiseazaContinut(); // Începe bucla de afișare\n" .
+    "    });\n" .
+    "});\n" .
+    "</script>\n";

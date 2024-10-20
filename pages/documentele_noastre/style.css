@@ -1,0 +1,809 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;700&display=swap');
+/*este containerul in care se afiseaza cardurile la clic pe CANCELARIE (profesorii si administrativul)*/
+:root {
+    --max-cancelarie-height: auto; /* Setează aici valoarea dorită pentru înălțimea maximă */
+    --main-blue: #2b516a;
+    --red: #c32b28;
+    --white: #ffffff;
+    --black: #000000;
+    --shade-blue-1: #003C64;
+    --shade-blue-2: #004AAC;
+    --font-header: 'Poppins', sans-serif;
+    --font-subheader: 'Lora', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* Body Text Styles */
+p, span, div, a, li, input, textarea, button {
+    font-family: var(--font-body);
+    font-weight: normal;
+}
+
+* {
+    border-radius: 10px; /* Adjust the value as needed */
+}
+
+a {
+    color: var(--main-blue);
+    text-decoration: none;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #555;
+  font-size: 16px;
+}
+
+.col-stanga-titlu {
+  margin: 3;
+  color: var(--shade-blue-1); /* Culoarea textului pentru titlul din stânga */
+  font-weight: bold; /* Grosimea fontului */
+  padding: 3px 5px; /* Padding în jurul textului */
+  background-color: rgba(255, 255, 255, 0.7); /* Fundal albicios difuz */
+  border-radius: 5px; /* Colțuri rotunjite pentru etichetă */
+  font-size: 20px; /* sau orice altă dimensiune care se potrivește */
+  text-align: center; /* Adăugați această linie pentru a centra titlul */
+}
+
+.col-dreapta-titlu {
+  margin: 3;
+  color: var(--shade-blue-1); /* Culoarea textului pentru titlul din dreapta */
+  font-weight: bold; /* Grosimea fontului */
+  padding: 3px 5px; /* Padding în jurul textului */
+  background-color: rgba(255, 255, 255, 0.7); /* Fundal albicios difuz */
+  border-radius: 5px; /* Colțuri rotunjite pentru etichetă */
+  font-size: 20px; /* sau orice altă dimensiune care se potrivește */
+  text-align: center; /* Adăugați această linie pentru a centra titlul */
+}
+
+
+.nume-grupa {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 1.49rem;
+    color: var(--main-blue);
+}
+
+.grupa-mica-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.logo-link {
+  text-decoration: none; /* Elimină sublinierea implicită a linkurilor */
+  color: inherit; /* Păstrează culoarea textului moștenită, dacă este necesar */
+}
+
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url('tid4k.png');
+  width: 1.8cm;
+  height: 1.55cm;
+  position: absolute;
+  top: 3px;
+  right: 13px;
+}
+
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url('/pages/tid4k.png');
+  width: 1.8cm;
+  height: 1.55cm;
+  position: fixed;
+  top: 3px;
+  right: 3px;
+}
+
+.footer-container {
+    background-color: var(--main-blue);
+  padding: 10px;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  text-align: center;
+    color: white;
+
+}
+
+
+.upload_button {
+    display: inline-block;
+    padding: 0px 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    margin-left: 1px; /* Adaugă marginea dreaptă aici */
+    margin-right: 20px; /* Adaugă marginea dreaptă aici */
+}
+
+.download_button {
+    display: inline-block;
+    padding: 0px 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #7b4dbf; /* Alegeți o nuanță de violet care vă place */
+    border-color: #6a42b7; /* Alegeți o nuanță de violet care vă place */
+}
+
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3px;
+  position: sticky;
+  z-index: 998;
+}
+
+/* este incasetarea formularului in care se afla butoanele de upload si download si codul acesta determina alnierea la capetele stanga dreapta */
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.file-name {
+    font-size: 1.2rem; /* Ajustați mărimea fontului pentru numele fișierului */
+    font-size: calc(0.7rem + 0.4vw);
+}
+
+/*Pentru hover facem shade 2 de albastru*/
+.file-name:hover {
+    color: var(--shade-blue-2); /* Change to the desired color */
+}
+
+.file-user-name {
+    font-size: 0.97rem; /* Ajustați mărimea fontului pentru numele și prenumele utilizatorului */
+}
+
+.file-date {
+    font-size: 0.79rem; /* Ajustați mărimea fontului pentru data și ora */
+}
+
+.hidden {
+    display: none;
+}
+
+
+.file-name-selected {
+    color: var(--red); /* Alegeți culoarea dorită aici */
+}
+
+
+.column-left, .column-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.file-item {
+    font-size: 1.1rem;
+    color: var(--red); /* Alegeți culoarea dorită aici */
+
+}
+
+
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .fixed-iframe {
+    top: calc(60px + 20px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  }
+
+  .fixed-img {
+    top: calc(60px + 20px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  }
+
+
+
+}
+
+@media (max-width: 768px) {
+  /* Stiluri pentru ecrane mai mici de 768px */
+
+  .fixed-title {
+  position: sticky;
+  position: -webkit-sticky; /* Adăugați această linie pentru a oferi suport pentru Safari */
+  top: 100px; /* Acest număr ar trebui să fie înălțimea headerului */
+  z-index: 999;
+  }
+
+  .fixed-iframe {
+    top: calc(60px + 40px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  }
+
+  .fixed-img {
+    top: calc(60px + 40px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  }
+
+
+
+}
+
+@media (max-width: 576px) {
+  /* Stiluri pentru ecrane mai mici de 576px */
+
+  .fixed-title {
+  position: sticky;
+  position: -webkit-sticky; /* Adăugați această linie pentru a oferi suport pentru Safari */
+  top: 155px; /* Acest număr ar trebui să fie înălțimea headerului */
+  z-index: 999;
+  }
+
+  .fixed-iframe {
+    top: calc(60px + 95px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  }
+
+  .fixed-img {
+    top: calc(60px + 95px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  }
+
+
+
+}
+
+@media (max-width: 480px) {
+  /* Stiluri pentru ecrane mai mici de 480px */
+
+  .fixed-title {
+  position: sticky;
+  position: -webkit-sticky; /* Adăugați această linie pentru a oferi suport pentru Safari */
+  top: 50px; /* Acest număr ar trebui să fie înălțimea headerului */
+  z-index: 999;
+  }
+
+  .fixed-iframe {
+    position: sticky;
+    position: -webkit-sticky; /* Adăugați această linie pentru a oferi suport pentru Safari */
+    top: calc(50px + 10px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  }
+
+  .fixed-img {
+    position: sticky;
+    position: -webkit-sticky; /* Adăugați această linie pentru a oferi suport pentru Safari */
+    top: calc(50px + 10px); /* Acest număr ar trebui să fie înălțimea headerului + înălțimea titlului coloanei stânga */
+  }
+
+
+
+
+}/*aici se termina @media-Queries pentru diferitele tipuri de ecran mobil*/
+
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container .logo {
+  /*position: absolute;*/
+  /*top: 2px;*/
+ /* right: 2px; *//* a crescut valoarea pentru a deplasa logo-ul spre stânga */
+ /* width: 2.2cm;*/
+ /* height: 2.2cm;*/
+  /*background-size: contain;*/
+  /*margin-right: 2px; *//* adăugat marja la dreapta */
+}
+
+.header-container .grupa-mica-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-container .grupa-mica-wrapper a {
+  text-decoration: none;
+  color: #333;
+}
+
+.header-container .grupa-mica-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.profesori-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+  }
+
+.profesori-container {
+  text-align: left;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+.profesor-container {
+  background-color: #ffffff;
+  padding: 10px 0;
+  z-index: 1000;
+  position: relative;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+.profesor-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  padding: 0 10px;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+
+}
+
+.profesor-label,
+.profesor-nume {
+  margin-right: 5px;
+}
+
+.profesor-telefon {
+  margin-right: 5px;
+  font-size: 0.91em;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+.profesor-email {
+  margin-right: 5px;
+  font-size: 0.91em;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+.profesor-label {
+  color: gray;
+  font-size: 0.82em;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+
+.header-container .search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  width: 100%;
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+
+}
+
+/* Add this CSS to create the line */
+.search-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;              /* Positions the line at the bottom of the header */
+    left: 10%;              /* Starts 10% from the left edge */
+    width: 80%;             /* Line spans 80% width, leaving 10% on each side */
+    border-bottom: 2px solid black; /* Creates the thin black line */
+    border-radius: 10px;
+}
+
+.search-input {
+  width: 200px;
+  padding: 5px;
+  z-index: 1000;
+  position: relative;
+  border: 1px solid #cccccc; /* adăugat un border gri */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* adăugat un box-shadow gri */
+}
+
+
+.separator {
+  height: 1px;
+  background-color: #ccc;
+  width: 100%;
+  margin-top:7px; /* adăugat pentru a crea spațiu între căutare și separator */
+  background-color: #ffffff; /* adăugat pentru a avea un fundal alb */
+}
+
+/*fereastra modala in care apare doar denumirea automata a fisierului propusa pentru numele fisierului*/
+.file-name-input {
+    width: 350px; /* Setează lățimea dorită, de exemplu 90% */
+    height: 40px;
+    font-size: 16px;
+    color:  #800080;
+
+}
+
+/*stiluri pentru fereastra modala care se ocupa de validarea redenumirii automate plasata peste fereastra iframe sau img*/
+#renameModal {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    background-color: rgba(255, 255, 255, 0.45); /* Culoare albicioasă cu opacitate de 45% */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
+
+}
+
+#renameModal h3 {
+    font-size: 18px; /* Ajustează dimensiunea fontului */
+    color: var(--shade-blue-1); /* Setează culoarea fontului la violet */
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); /* Adaugă o umbră albicioasă */
+}
+
+
+#renameModal button {
+    /* Stiluri pentru butoane */
+    background-color: rgba(76, 175, 80, 0.9); /* Culoare verde cu opacitate de 90% */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#renameModal button.cancel {
+    /* Stiluri pentru butonul de anulare */
+    background-color: rgba(244, 67, 54, 0.9); /* Culoare roșie cu opacitate de 90% */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 15px;
+}
+
+
+/*de aici incepe codul pentru fisierul imagini_activitati.php*/
+.coloane-img-prof-dvs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.col-img-stanga,
+.col-img-dreapta {
+    flex-basis: 48%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.col-img-stanga h2,
+.col-img-dreapta h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.image-selected {
+    border: 2px solid var(--shade-blue-1);
+    color: var(--shade-blue-1);
+}
+
+/*aici este codul style pentru grila de 3 x 3 imagini afisate din imagini_activitati.php*/
+/* Container-ul general pentru grila de imagini */
+/* Container-ul general pentru grila de imagini */
+.image-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Fiecare element individual din grila de imagini */
+.image-grid-item {
+    flex: 1 1 calc(33.33% - 16px);
+    max-width: calc(33.33% - 16px);
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1; /* 1:1 aspect ratio */
+    box-shadow: 0 4px 6px rgba(138, 43, 226, 0.1); /* Folosiți culoarea violet */
+    transition: box-shadow 0.3s;
+}
+
+/* Stilul pentru fiecare imagine din grila */
+.galerie-activitati {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Un efect de hover pentru a indica interactivitatea cu imaginile */
+.galerie-activitati:hover {
+    transform: scale(1.5);
+}
+
+/* Un efect de hover pentru umbra casetei de imagine */
+.image-grid-item:hover {
+    box-shadow: 0 8px 12px rgba(138, 43, 226, 0.2); /* Folosiți culoarea violet */
+}
+
+
+/*caseta violet care incadreaza caseta de imagine selectata*/
+.image-box-selected {
+    border: 7px solid #800080;
+    box-sizing: border-box;
+}
+
+
+/*afiseaza numele fisierului peste caseta de imagine selectata*/
+.image-caption {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.image-grid-item:hover .image-caption {
+    display: block;
+}
+
+.image-selected .image-caption {
+    display: block;
+    background-color: var(--shade-blue-1); /* culoarea fundalului este acum violet */
+}
+
+/*acest cod afiseaza informatii despre fisier, peste fereastra de previzualizare, la mouseover*/
+.preview-container .image-caption {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.preview-container:hover .image-caption {
+    display: block;
+}
+
+/*codul care afiseaza informatii sub imaginea selectata*/
+.image-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-label {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.image-label-hidden {
+    display: none;
+}
+
+/*codul pentru fereastra de previzualizare cu elemente de navigare*/
+.preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.preview-container-hidden {
+    display: none;
+}
+
+.preview-image-box {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.close-preview {
+    position: absolute;
+    top: -9px; /* Mută "x" mai sus */
+    right: -2px; /* Mută "x" mai la dreapta */
+    cursor: pointer;
+    font-family: Google, salsa;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}
+
+
+
+/*elementele de navigare ale ferestrei de preview*/
+.preview-navigation {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: Google, salsa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--shade-blue-1);
+  position: absolute;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 5px;
+  text-shadow: 2px 2px 3px rgba(192,192,192,0.7);
+  text-align: center;
+}
+
+.preview-navigation-top {
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+
+.preview-navigation-bottom {
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+
+
+/*fond albicios pentru caseta fileInfoCaseta din partea de jos a ferestrei de preview*/
+.file-info-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/*codul pentru afisarea thumbnailurilor in dreptul fisierelor listate :"...de la Profesor" si "...de la dumneavoastra"*/
+.file-thumbnail {
+    width: 20px;  /* Ajustează lățimea după preferințe */
+    height: 30px; /* Ajustează înălțimea după preferințe */
+    margin-right: 10px; /* Ajustează marja pentru a avea spațiu între imagine și numele fișierului */
+}
+
+
+
+
+/* Media query pentru ecranele mobile */
+@media (max-width: 768px) {
+    .image-grid-item {
+        flex: 1 1 calc(50% - 16px);
+        max-width: calc(50% - 16px);
+    }
+}
+
+/* Media query pentru ecranele mobile */
+@media (max-width: 460px) {
+    .image-grid-item {
+        flex: 1 1 calc(50% - 14px);
+        max-width: calc(50% - 14px);
+    }
+}
+
+/*icon-urile de download si delete de pe asociat layer-ului opac la clic pe imagine sau document*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* Transparent */
+    display: none; /* Ascuns implicit */
+    z-index: 9; /* Asigură-te că layer-ul este deasupra altor elemente */
+    transition: background-color 0.3s;
+}
+
+.overlay .download-icon, .overlay .delete-icon {
+    position: absolute;
+    cursor: pointer;
+    filter: drop-shadow(0 0 0px lightgray); /* Adăugare umbră gri deschis */
+    visibility: hidden; /* Ascuns implicit */
+}
+
+.overlay .download-icon {
+    width: 45px;
+    height: 45px;
+    bottom: 4px;
+    left: 4px;
+}
+
+.overlay .delete-icon {
+    width: 45px;
+    height: 45px;
+    top: 4px;
+    right: 4px;
+}
+
+
+/*caseta de mesaje de succes sau esec afisata in pagina de browser*/
+#popup_message {
+    display: none;
+    position: fixed;
+    width: 60%;
+    height: 30%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px;
+}

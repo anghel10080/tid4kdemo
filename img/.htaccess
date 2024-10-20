@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^pre-autorizare$ pages/pre_autorizare.php [L]
+
+#permite accesss CROS pentru continut iframe
+<IfModule mod_headers.c>
+  SetEnvIf Origin "^http(s)?://(.+\.)?(tid4k|localhost|192\.168\.31\.51)$" origin_is=$0
+  Header always set Access-Control-Allow-Origin %{origin_is}e env=origin_is
+  Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+  Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>

@@ -1,0 +1,6 @@
+Data,         Ora,    Status,         Nefunctional (%)
+20-10-2024, 19:00 - 20:00, a afisat corect, 0%, Ostasilor
+20-10-2024, 18:00 - 19:00, a afisat corect, 0%, Ostasilor
+20-10-2024, 17:00 - 18:00, a afisat corect, 0%, Ostasilor
+20-10-2024, 16:00 - 17:00, a afisat partial, 8%, Ostasilor
+20-10-2024, 15:00 - 16:00, a afisat corect, 0%, Ostasilor
